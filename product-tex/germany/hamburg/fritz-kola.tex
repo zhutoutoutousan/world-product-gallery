@@ -1,0 +1,1927 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[german,english]{babel}
+\usepackage{xeCJK} % For Chinese characters
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{positioning, arrows.meta, shapes.geometric, decorations.pathmorphing, decorations.markings}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{float}
+
+% Page setup
+\geometry{margin=2.5cm}
+
+% Chinese font setup
+% Note: This document requires XeLaTeX to compile (not pdfLaTeX)
+% If you get font errors, change the font name below to one available on your system
+% Common fonts: SimSun, STSong, Noto Sans CJK SC, AR PL UMing CN, FandolSong
+% For Overleaf, try: Noto Sans CJK SC or FandolSong
+\IfFontExistsTF{Noto Sans CJK SC}{
+    \setCJKmainfont{Noto Sans CJK SC}
+}{
+    \IfFontExistsTF{FandolSong}{
+        \setCJKmainfont{FandolSong}
+    }{
+        \IfFontExistsTF{SimSun}{
+            \setCJKmainfont{SimSun}
+        }{
+            \IfFontExistsTF{STSong}{
+                \setCJKmainfont{STSong}
+            }{
+                % If none found, you may need to install a Chinese font
+                % or change the font name above to match your system
+                \setCJKmainfont{AR PL UMing CN}
+            }
+        }
+    }
+}
+
+% Title
+\title{Fritz-Kola: Eine umfassende Supply-Chain-Analyse\\
+Fritz-Kola: A Comprehensive Supply Chain Analysis\\
+Fritz-Kola：全面的供应链分析}
+\author{World Product Gallery}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+% ============================================
+% PRODUKTANLEITUNG / PRODUCT DESCRIPTION
+% ============================================
+\section{Produktanleitung / Product Description / 产品说明}
+
+\subsection{Deutsch}
+Fritz-Kola ist eine deutsche Cola-Marke, die 2002 in Hamburg gegründet wurde. Die Marke zeichnet sich durch ihren hohen Koffeingehalt, natürliche Zutaten und eine unabhängige, nachhaltige Produktionsphilosophie aus. Fritz-Kola wird in verschiedenen Geschmacksrichtungen angeboten und hat sich als Alternative zu den großen internationalen Cola-Marken etabliert.
+
+\subsection{English}
+Fritz-Kola is a German cola brand founded in 2002 in Hamburg. The brand is characterized by its high caffeine content, natural ingredients, and an independent, sustainable production philosophy. Fritz-Kola is available in various flavors and has established itself as an alternative to major international cola brands.
+
+\subsection{中文}
+Fritz-Kola 是一个德国可乐品牌，于 2002 年在汉堡成立。该品牌以其高咖啡因含量、天然成分以及独立、可持续的生产理念而著称。Fritz-Kola 提供多种口味，已成为国际大型可乐品牌的替代选择。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{fritz-kola.jpg}
+\caption{Fritz-Kola Produkt / Product / 产品}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{fritz-kola-details.jpg}
+\caption{Fritz-Kola Details / 产品详情}
+\end{figure}
+
+% ============================================
+% MARKT / MARKET
+% ============================================
+\section{Markt / Market / 市场}
+
+\subsection{Deutsch}
+Der deutsche Getränkemarkt wird von großen internationalen Konzernen dominiert, aber es gibt einen wachsenden Trend zu regionalen und unabhängigen Marken. Fritz-Kola positioniert sich im Premium-Segment und zielt auf umweltbewusste und qualitätsorientierte Verbraucher ab. Der Markt umfasst Supermärkte, Getränkemärkte, Restaurants, Bars und Online-Händler.
+
+\subsection{English}
+The German beverage market is dominated by large international corporations, but there is a growing trend toward regional and independent brands. Fritz-Kola positions itself in the premium segment and targets environmentally conscious and quality-oriented consumers. The market includes supermarkets, beverage stores, restaurants, bars, and online retailers.
+
+\subsection{中文}
+德国饮料市场由大型国际公司主导，但区域性和独立品牌的趋势正在增长。Fritz-Kola 定位在高端市场，面向环保和质量导向的消费者。市场包括超市、饮料店、餐厅、酒吧和在线零售商。
+
+% ============================================
+% HERSTELLERINFORMATION / MANUFACTURER INFORMATION
+% ============================================
+\section{Herstellerinformation / Manufacturer Information / 制造商信息}
+
+\subsection{Deutsch}
+\textbf{Fritz-Kola GmbH \& Co. KG}
+\begin{itemize}
+\item \textbf{Gegründet:} 2002
+\item \textbf{Hauptsitz:} Hamburg, Deutschland
+\item \textbf{Geschäftsführer:} Lorenz Hampl, Mirco Wolf Wiegert
+\item \textbf{Philosophie:} Unabhängigkeit, Nachhaltigkeit, Qualität
+\item \textbf{Produktion:} Eigene Produktionsstätte in Hamburg
+\item \textbf{Beschäftigte:} Über 100 Mitarbeiter
+\end{itemize}
+
+\subsection{English}
+\textbf{Fritz-Kola GmbH \& Co. KG}
+\begin{itemize}
+\item \textbf{Founded:} 2002
+\item \textbf{Headquarters:} Hamburg, Germany
+\item \textbf{Management:} Lorenz Hampl, Mirco Wolf Wiegert
+\item \textbf{Philosophy:} Independence, sustainability, quality
+\item \textbf{Production:} Own production facility in Hamburg
+\item \textbf{Employees:} Over 100 employees
+\end{itemize}
+
+\subsection{中文}
+\textbf{Fritz-Kola GmbH \& Co. KG}
+\begin{itemize}
+\item \textbf{成立时间:} 2002年
+\item \textbf{总部:} 德国汉堡
+\item \textbf{管理层:} Lorenz Hampl, Mirco Wolf Wiegert
+\item \textbf{理念:} 独立性、可持续性、质量
+\item \textbf{生产:} 汉堡自有生产设施
+\item \textbf{员工:} 超过100名员工
+\end{itemize}
+
+% Manufacturer Location Map
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fritz-kola-manufacturer-map.png}
+\caption{Herstellerstandort in Hamburg / Manufacturer Location in Hamburg / 汉堡制造商位置}
+\end{figure}
+
+% ============================================
+% MARKTENTITÄT / MARKET ENTITY
+% ============================================
+\section{Marktentität / Market Entity / 市场实体}
+
+\subsection{Deutsch}
+Fritz-Kola operiert als unabhängige Marke in einem von Konzernen dominierten Markt. Die Marke hat eine starke lokale und regionale Präsenz in Deutschland, insbesondere in Hamburg und Norddeutschland. Sie expandiert zunehmend in andere europäische Märkte und ist auch international verfügbar.
+
+\subsection{English}
+Fritz-Kola operates as an independent brand in a market dominated by corporations. The brand has a strong local and regional presence in Germany, particularly in Hamburg and northern Germany. It is increasingly expanding into other European markets and is also available internationally.
+
+\subsection{中文}
+Fritz-Kola 作为独立品牌在由大公司主导的市场中运营。该品牌在德国，特别是汉堡和德国北部，拥有强大的本地和区域影响力。它正在扩展到其他欧洲市场，并在国际上也有销售。
+
+% ============================================
+% SUPPLY CHAIN ANALYSE / SUPPLY CHAIN ANALYSIS
+% ============================================
+\section{Supply Chain Analyse / Supply Chain Analysis / 供应链分析}
+
+\subsection{Deutsch}
+Die Supply Chain von Fritz-Kola umfasst mehrere Stufen:
+
+\begin{enumerate}
+\item \textbf{Rohstoffbeschaffung:} Zucker, Koffein, natürliche Aromen, Wasser, Zitronensäure
+\item \textbf{Produktion:} Eigene Produktionsstätte in Hamburg
+\item \textbf{Verpackung:} Glasflaschen und Dosen, nachhaltige Verpackungslösungen
+\item \textbf{Vertrieb:} Direktvertrieb und über Händlernetze
+\item \textbf{Endkunden:} Supermärkte, Getränkemärkte, Gastronomie, Online-Händler
+\end{enumerate}
+
+\subsection{English}
+The Fritz-Kola supply chain includes several stages:
+
+\begin{enumerate}
+\item \textbf{Raw Material Sourcing:} Sugar, caffeine, natural flavors, water, citric acid
+\item \textbf{Production:} Own production facility in Hamburg
+\item \textbf{Packaging:} Glass bottles and cans, sustainable packaging solutions
+\item \textbf{Distribution:} Direct sales and through dealer networks
+\item \textbf{End Customers:} Supermarkets, beverage stores, gastronomy, online retailers
+\end{enumerate}
+
+\subsection{中文}
+Fritz-Kola 的供应链包括几个阶段：
+
+\begin{enumerate}
+\item \textbf{原材料采购:} 糖、咖啡因、天然香料、水、柠檬酸
+\item \textbf{生产:} 汉堡自有生产设施
+\item \textbf{包装:} 玻璃瓶和罐装，可持续包装解决方案
+\item \textbf{分销:} 直接销售和通过经销商网络
+\item \textbf{终端客户:} 超市、饮料店、餐饮业、在线零售商
+\end{enumerate}
+
+% Supply Chain Diagram
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    node distance=2cm,
+    box/.style={rectangle, draw, minimum width=3cm, minimum height=1.2cm, text centered, text width=2.5cm, align=center},
+    arrow/.style={->, >=Stealth, thick}
+]
+    % Nodes
+    \node[box] (raw) at (-7.6cm,-1.2cm) {\begin{tabular}{c}Rohstoffe\\Raw Materials\\原材料\end{tabular}};
+    \node[box] (prod) at (-2.8cm,-1.2cm) {\begin{tabular}{c}Produktion\\Production\\生产\end{tabular}};
+    \node[box] (pack) at (2.8cm,-1.2cm) {\begin{tabular}{c}Verpackung\\Packaging\\包装\end{tabular}};
+    \node[box] (dist) at (2.8cm,-6.0cm) {\begin{tabular}{c}Vertrieb\\Distribution\\分销\end{tabular}};
+    \node[box] (retail) at (-2.8cm,-6.0cm) {\begin{tabular}{c}Einzelhandel\\Retail\\零售\end{tabular}};
+    \node[box] (consumer) at (-7.6cm,-6.0cm) {\begin{tabular}{c}Verbraucher\\Consumer\\消费者\end{tabular}};
+    
+    % Arrows
+    \draw[arrow] (raw) -- (prod);
+    \draw[arrow] (prod) -- (pack);
+    \draw[arrow] (pack) -- (dist);
+    \draw[arrow] (dist) -- (retail);
+    \draw[arrow] (retail) -- (consumer);
+\end{tikzpicture}
+\caption{Supply Chain Diagramm / Supply Chain Diagram / 供应链图}
+\end{figure}
+
+% Geographic Supply Chain Map (Python-generated)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fritz-kola-supply-chain-map.png}
+\caption{Geografische Supply Chain Karte / Geographic Supply Chain Map / 地理供应链地图}
+\end{figure}
+
+% Alternative simplified TikZ diagram
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=4]
+    % Draw Germany outline (simplified)
+    \draw[thick] (0,0) rectangle (4,3);
+    \node[align=center] at (2,1.5) {\begin{tabular}{c}Deutschland\\Germany\\德国\end{tabular}};
+    
+    % Hamburg location
+    \filldraw[red] (1.5,2.5) circle (3pt);
+    \node[above, align=center] at (1.5,2.5) {\begin{tabular}{c}Hamburg\\(Produktion)\end{tabular}};
+    
+    % Distribution arrows
+    \draw[->, thick, blue] (1.5,2.5) -- (0.5,0.5);
+    \draw[->, thick, blue] (1.5,2.5) -- (2.5,0.5);
+    \draw[->, thick, blue] (1.5,2.5) -- (3.5,1.5);
+    
+    % Regional markets
+    \node[below, align=center] at (0.5,0.5) {\begin{tabular}{c}Norddeutschland\\Northern Germany\\德国北部\end{tabular}};
+    \node[below, align=center] at (2.5,0.5) {\begin{tabular}{c}Süddeutschland\\Southern Germany\\德国南部\end{tabular}};
+    \node[right, align=center] at (3.5,1.5) {\begin{tabular}{c}Europa\\Europe\\欧洲\end{tabular}};
+    
+    % Legend
+    \node[draw, below right] at (0,0) {
+        \begin{tabular}{ll}
+            \textcolor{red}{$\bullet$} & Produktionsstandort \\
+            \textcolor{blue}{$\rightarrow$} & Vertriebswege
+        \end{tabular}
+    };
+\end{tikzpicture}
+\caption{Vereinfachte Supply Chain Übersicht / Simplified Supply Chain Overview / 简化供应链概览}
+\end{figure}
+
+% ============================================
+% DETAILLIERTE ROHSTOFFANALYSE / DETAILED RAW MATERIALS ANALYSIS
+% ============================================
+\subsection{Detaillierte Rohstoffanalyse / Detailed Raw Materials Analysis / 详细原材料分析}
+
+\subsubsection{Deutsch}
+Die Rohstoffbeschaffung für Cola-Produktion erfordert umfangreiche Recherche und strategische Planung. Im Folgenden werden die wichtigsten Rohstoffe, ihre Herkunft, Beschaffung und Transport detailliert analysiert:
+
+\textbf{1. Zucker (Sugar)}
+\begin{itemize}
+\item \textbf{Herkunft:} Hauptsächlich aus Zuckerrüben (Deutschland, Frankreich, Polen) oder Zuckerrohr (Brasilien, Indien)
+\item \textbf{Spezifikationen:} Raffinierter Weißzucker, Reinheitsgrad 99.7\%, Partikelgröße 0.2-0.8mm
+\item \textbf{Beschaffung:} Direktverträge mit Zuckerproduzenten oder über Großhändler
+\item \textbf{Transport:} LKW-Transport in Big Bags (1000kg) oder Silofahrzeuge, Lagerung in klimatisierten Lagern
+\item \textbf{Kosten:} Ca. 0.50-0.80 €/kg (abhängig von Marktpreisen und Mengenrabatten)
+\item \textbf{Lieferanten:} Südzucker AG, Nordzucker AG, Pfeifer \& Langen
+\item \textbf{Qualitätskontrolle:} Zertifikate (HACCP, ISO 22000), regelmäßige Laboranalysen
+\end{itemize}
+
+\textbf{2. Koffein}
+\begin{itemize}
+\item \textbf{Herkunft:} Synthetisch hergestellt (China, Indien) oder aus Kaffeebohnen/Kolanüssen extrahiert
+\item \textbf{Spezifikationen:} Pharmazeutische Qualität, 99\% Reinheit, weißes kristallines Pulver
+\item \textbf{Beschaffung:} Spezialisierte Chemikalienhändler, pharmazeutische Zulieferer
+\item \textbf{Transport:} Versiegelte Behälter, gekennzeichnet als Gefahrgut, Kühltransport bei Bedarf
+\item \textbf{Kosten:} Ca. 15-25 €/kg (synthetisch) oder 30-50 €/kg (natürlich)
+\item \textbf{Lieferanten:} BASF, CSPC Pharmaceutical, Shandong Xinhua Pharmaceutical
+\item \textbf{Regulierung:} EU-Verordnungen, maximale Konzentration 150mg/L in Getränken
+\end{itemize}
+
+\textbf{3. Kohlensäure (CO2)}
+\begin{itemize}
+\item \textbf{Herkunft:} Industrielle Produktion als Nebenprodukt der Ammoniak-Herstellung oder aus natürlichen Quellen
+\item \textbf{Spezifikationen:} Lebensmittelqualität, 99.9\% Reinheit, flüssig oder gasförmig
+\item \textbf{Beschaffung:} Direkt von Gasproduzenten oder über Distributoren
+\item \textbf{Transport:} Druckbehälter (Tankwagen), Pipeline bei großen Mengen
+\item \textbf{Kosten:} Ca. 0.10-0.20 €/kg
+\item \textbf{Lieferanten:} Linde, Air Liquide, Messer Group
+\item \textbf{Lagerung:} Drucktanks, Sicherheitsvorschriften beachten
+\end{itemize}
+
+\textbf{4. Wasser}
+\begin{itemize}
+\item \textbf{Herkunft:} Lokale Wasserversorgung (Hamburg) oder eigene Brunnen
+\item \textbf{Aufbereitung:} Umkehrosmose, Aktivkohlefilter, UV-Desinfektion, Entmineralisierung
+\item \textbf{Spezifikationen:} Trinkwasserqualität nach EU-Richtlinien, pH-Wert 6.5-7.5, Härte < 1°dH
+\item \textbf{Transport:} Pipeline direkt in Produktionsanlage
+\item \textbf{Kosten:} Ca. 0.002-0.005 €/Liter (inkl. Aufbereitung)
+\item \textbf{Qualitätskontrolle:} Kontinuierliche Überwachung, tägliche Proben
+\end{itemize}
+
+\textbf{5. Zitronensäure (Citric Acid)}
+\begin{itemize}
+\item \textbf{Herkunft:} Fermentation von Melasse oder Zitrusfrüchten (China, Italien)
+\item \textbf{Spezifikationen:} Lebensmittelqualität, E330, Monohydrat oder wasserfrei
+\item \textbf{Beschaffung:} Chemikalienhändler, direkte Importe
+\item \textbf{Transport:} LKW in Säcken (25kg) oder Big Bags, trocken lagern
+\item \textbf{Kosten:} Ca. 1.20-1.80 €/kg
+\item \textbf{Lieferanten:} Jungbunzlauer, Cargill, Tate \& Lyle
+\end{itemize}
+
+\textbf{6. Natürliche Aromen}
+\begin{itemize}
+\item \textbf{Herkunft:} Komplexe Mischungen aus natürlichen Extrakten (Vanille, Zimt, Nelken, Limette, etc.)
+\item \textbf{Spezifikationen:} Natürliche Aromastoffe nach EU-Verordnung, keine künstlichen Aromen
+\item \textbf{Beschaffung:} Spezialisierte Aromenhersteller, oft als Geheimrezeptur
+\item \textbf{Transport:} Versiegelte Behälter, kühl und lichtgeschützt
+\item \textbf{Kosten:} Ca. 50-200 €/kg (abhängig von Komplexität)
+\item \textbf{Lieferanten:} Givaudan, Firmenich, Symrise, IFF
+\item \textbf{Geheimhaltung:} Strikte Vertraulichkeitsvereinbarungen
+\end{itemize}
+
+\textbf{7. Farbstoff (Caramel Color E150d)}
+\begin{itemize}
+\item \textbf{Herkunft:} Herstellung durch Erhitzen von Zucker mit Ammoniumsulfit
+\item \textbf{Spezifikationen:} E150d Klasse IV, verschiedene Intensitäten
+\item \textbf{Beschaffung:} Spezialisierte Hersteller
+\item \textbf{Transport:} Flüssig in IBC-Containern oder als Pulver
+\item \textbf{Kosten:} Ca. 2-4 €/kg
+\item \textbf{Lieferanten:} DDW, Sethness, Ingredion
+\end{itemize}
+
+\textbf{8. Verpackungsmaterialien}
+\begin{itemize}
+\item \textbf{Glasflaschen:} Herstellung in Glashütten (Deutschland, Tschechien), 330ml Standard
+\item \textbf{Dosen:} Aluminiumdosen von Ball Corporation, Crown Holdings
+\item \textbf{Etiketten:} Druck auf recyceltem Papier oder Kunststoff
+\item \textbf{Verschlüsse:} Kronkorken oder Schraubverschlüsse
+\item \textbf{Transport:} LKW-Transport, Palettierung, Mehrweg-Systeme
+\item \textbf{Kosten:} Glasflasche ca. 0.15-0.25 €, Dose ca. 0.10-0.15 €
+\end{itemize}
+
+\subsubsection{English}
+Raw material sourcing for cola production requires extensive research and strategic planning. The following details the most important raw materials, their origins, procurement, and transport:
+
+\textbf{1. Sugar}
+\begin{itemize}
+\item \textbf{Origin:} Primarily from sugar beets (Germany, France, Poland) or sugarcane (Brazil, India)
+\item \textbf{Specifications:} Refined white sugar, 99.7\% purity, particle size 0.2-0.8mm
+\item \textbf{Procurement:} Direct contracts with sugar producers or through wholesalers
+\item \textbf{Transport:} Truck transport in Big Bags (1000kg) or silo vehicles, storage in climate-controlled warehouses
+\item \textbf{Cost:} Approximately 0.50-0.80 €/kg (depending on market prices and volume discounts)
+\item \textbf{Suppliers:} Südzucker AG, Nordzucker AG, Pfeifer \& Langen
+\item \textbf{Quality Control:} Certificates (HACCP, ISO 22000), regular laboratory analyses
+\end{itemize}
+
+\textbf{2. Caffeine}
+\begin{itemize}
+\item \textbf{Origin:} Synthetically produced (China, India) or extracted from coffee beans/kola nuts
+\item \textbf{Specifications:} Pharmaceutical quality, 99\% purity, white crystalline powder
+\item \textbf{Procurement:} Specialized chemical suppliers, pharmaceutical suppliers
+\item \textbf{Transport:} Sealed containers, labeled as hazardous goods, refrigerated transport if needed
+\item \textbf{Cost:} Approximately 15-25 €/kg (synthetic) or 30-50 €/kg (natural)
+\item \textbf{Suppliers:} BASF, CSPC Pharmaceutical, Shandong Xinhua Pharmaceutical
+\item \textbf{Regulation:} EU regulations, maximum concentration 150mg/L in beverages
+\end{itemize}
+
+\textbf{3. Carbon Dioxide (CO2)}
+\begin{itemize}
+\item \textbf{Origin:} Industrial production as byproduct of ammonia production or from natural sources
+\item \textbf{Specifications:} Food grade, 99.9\% purity, liquid or gaseous
+\item \textbf{Procurement:} Direct from gas producers or through distributors
+\item \textbf{Transport:} Pressure vessels (tank trucks), pipelines for large volumes
+\item \textbf{Cost:} Approximately 0.10-0.20 €/kg
+\item \textbf{Suppliers:} Linde, Air Liquide, Messer Group
+\item \textbf{Storage:} Pressure tanks, safety regulations must be observed
+\end{itemize}
+
+\textbf{4. Water}
+\begin{itemize}
+\item \textbf{Origin:} Local water supply (Hamburg) or own wells
+\item \textbf{Treatment:} Reverse osmosis, activated carbon filters, UV disinfection, demineralization
+\item \textbf{Specifications:} Drinking water quality according to EU guidelines, pH 6.5-7.5, hardness < 1°dH
+\item \textbf{Transport:} Pipeline directly to production facility
+\item \textbf{Cost:} Approximately 0.002-0.005 €/liter (including treatment)
+\item \textbf{Quality Control:} Continuous monitoring, daily samples
+\end{itemize}
+
+\textbf{5. Citric Acid}
+\begin{itemize}
+\item \textbf{Origin:} Fermentation of molasses or citrus fruits (China, Italy)
+\item \textbf{Specifications:} Food grade, E330, monohydrate or anhydrous
+\item \textbf{Procurement:} Chemical suppliers, direct imports
+\item \textbf{Transport:} Truck in bags (25kg) or Big Bags, store dry
+\item \textbf{Cost:} Approximately 1.20-1.80 €/kg
+\item \textbf{Suppliers:} Jungbunzlauer, Cargill, Tate \& Lyle
+\end{itemize}
+
+\textbf{6. Natural Flavors}
+\begin{itemize}
+\item \textbf{Origin:} Complex mixtures from natural extracts (vanilla, cinnamon, cloves, lime, etc.)
+\item \textbf{Specifications:} Natural flavorings according to EU regulation, no artificial flavors
+\item \textbf{Procurement:} Specialized flavor manufacturers, often as secret formulations
+\item \textbf{Transport:} Sealed containers, cool and light-protected
+\item \textbf{Cost:} Approximately 50-200 €/kg (depending on complexity)
+\item \textbf{Suppliers:} Givaudan, Firmenich, Symrise, IFF
+\item \textbf{Confidentiality:} Strict confidentiality agreements
+\end{itemize}
+
+\textbf{7. Color (Caramel Color E150d)}
+\begin{itemize}
+\item \textbf{Origin:} Production by heating sugar with ammonium sulfite
+\item \textbf{Specifications:} E150d Class IV, various intensities
+\item \textbf{Procurement:} Specialized manufacturers
+\item \textbf{Transport:} Liquid in IBC containers or as powder
+\item \textbf{Cost:} Approximately 2-4 €/kg
+\item \textbf{Suppliers:} DDW, Sethness, Ingredion
+\end{itemize}
+
+\textbf{8. Packaging Materials}
+\begin{itemize}
+\item \textbf{Glass Bottles:} Manufactured in glassworks (Germany, Czech Republic), 330ml standard
+\item \textbf{Cans:} Aluminum cans from Ball Corporation, Crown Holdings
+\item \textbf{Labels:} Printing on recycled paper or plastic
+\item \textbf{Closures:} Crown caps or screw caps
+\item \textbf{Transport:} Truck transport, palletization, reusable systems
+\item \textbf{Cost:} Glass bottle approximately 0.15-0.25 €, can approximately 0.10-0.15 €
+\end{itemize}
+
+\subsubsection{中文}
+可乐生产的原材料采购需要广泛的研究和战略规划。以下详细介绍了最重要的原材料、其来源、采购和运输：
+
+\textbf{1. 糖}
+\begin{itemize}
+\item \textbf{来源:} 主要来自甜菜（德国、法国、波兰）或甘蔗（巴西、印度）
+\item \textbf{规格:} 精制白糖，纯度99.7\%，粒度0.2-0.8mm
+\item \textbf{采购:} 与糖生产商直接签订合同或通过批发商
+\item \textbf{运输:} 卡车运输，使用大袋（1000kg）或筒仓车，储存在温控仓库中
+\item \textbf{成本:} 约0.50-0.80 €/kg（取决于市场价格和数量折扣）
+\item \textbf{供应商:} Südzucker AG, Nordzucker AG, Pfeifer \& Langen
+\item \textbf{质量控制:} 证书（HACCP, ISO 22000），定期实验室分析
+\end{itemize}
+
+\textbf{2. 咖啡因}
+\begin{itemize}
+\item \textbf{来源:} 合成生产（中国、印度）或从咖啡豆/可乐果中提取
+\item \textbf{规格:} 药用级，纯度99\%，白色结晶粉末
+\item \textbf{采购:} 专业化学品供应商，制药供应商
+\item \textbf{运输:} 密封容器，标记为危险品，必要时冷藏运输
+\item \textbf{成本:} 约15-25 €/kg（合成）或30-50 €/kg（天然）
+\item \textbf{供应商:} BASF, CSPC Pharmaceutical, Shandong Xinhua Pharmaceutical
+\item \textbf{法规:} 欧盟法规，饮料中最大浓度150mg/L
+\end{itemize}
+
+\textbf{3. 二氧化碳 (CO2)}
+\begin{itemize}
+\item \textbf{来源:} 作为氨生产的副产品或来自天然来源的工业生产
+\item \textbf{规格:} 食品级，纯度99.9\%，液态或气态
+\item \textbf{采购:} 直接从气体生产商或通过分销商
+\item \textbf{运输:} 压力容器（罐车），大量时使用管道
+\item \textbf{成本:} 约0.10-0.20 €/kg
+\item \textbf{供应商:} Linde, Air Liquide, Messer Group
+\item \textbf{储存:} 压力罐，必须遵守安全规定
+\end{itemize}
+
+\textbf{4. 水}
+\begin{itemize}
+\item \textbf{来源:} 当地供水（汉堡）或自有水井
+\item \textbf{处理:} 反渗透、活性炭过滤器、紫外线消毒、去矿化
+\item \textbf{规格:} 符合欧盟指南的饮用水质量，pH值6.5-7.5，硬度<1°dH
+\item \textbf{运输:} 管道直接输送到生产设施
+\item \textbf{成本:} 约0.002-0.005 €/升（包括处理）
+\item \textbf{质量控制:} 持续监控，每日采样
+\end{itemize}
+
+\textbf{5. 柠檬酸}
+\begin{itemize}
+\item \textbf{来源:} 糖蜜或柑橘类水果的发酵（中国、意大利）
+\item \textbf{规格:} 食品级，E330，一水合物或无水的
+\item \textbf{采购:} 化学品供应商，直接进口
+\item \textbf{运输:} 卡车运输，袋装（25kg）或大袋，干燥储存
+\item \textbf{成本:} 约1.20-1.80 €/kg
+\item \textbf{供应商:} Jungbunzlauer, Cargill, Tate \& Lyle
+\end{itemize}
+
+\textbf{6. 天然香料}
+\begin{itemize}
+\item \textbf{来源:} 来自天然提取物的复杂混合物（香草、肉桂、丁香、酸橙等）
+\item \textbf{规格:} 符合欧盟法规的天然香料，无人工香料
+\item \textbf{采购:} 专业香料制造商，通常作为秘密配方
+\item \textbf{运输:} 密封容器，冷藏避光
+\item \textbf{成本:} 约50-200 €/kg（取决于复杂性）
+\item \textbf{供应商:} Givaudan, Firmenich, Symrise, IFF
+\item \textbf{保密性:} 严格的保密协议
+\end{itemize}
+
+\textbf{7. 着色剂（焦糖色E150d）}
+\begin{itemize}
+\item \textbf{来源:} 通过加热糖和亚硫酸铵生产
+\item \textbf{规格:} E150d IV类，不同强度
+\item \textbf{采购:} 专业制造商
+\item \textbf{运输:} 液体IBC容器或粉末
+\item \textbf{成本:} 约2-4 €/kg
+\item \textbf{供应商:} DDW, Sethness, Ingredion
+\end{itemize}
+
+\textbf{8. 包装材料}
+\begin{itemize}
+\item \textbf{玻璃瓶:} 在玻璃厂制造（德国、捷克），标准330ml
+\item \textbf{罐:} 来自Ball Corporation, Crown Holdings的铝罐
+\item \textbf{标签:} 在再生纸或塑料上印刷
+\item \textbf{封口:} 皇冠盖或螺旋盖
+\item \textbf{运输:} 卡车运输，托盘化，可重复使用系统
+\item \textbf{成本:} 玻璃瓶约0.15-0.25 €，罐约0.10-0.15 €
+\end{itemize}
+
+% Detailed Raw Materials Flow Diagram
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    node distance=1.5cm,
+    raw/.style={ellipse, draw, fill=blue!20, text width=2.2cm, text centered, font=\small},
+    process/.style={rectangle, draw, fill=green!20, text width=2.5cm, text centered, font=\small, minimum height=1cm},
+    final/.style={rectangle, draw, fill=red!30, text width=2.5cm, text centered, font=\small, minimum height=1.2cm},
+    arrow/.style={->, >=Stealth, thick},
+    label/.style={font=\tiny}
+]
+    % Raw materials (top row)
+    \node[raw] (sugar) at (-7.6cm,-3.6cm) {Zucker\\Sugar\\糖};
+    \node[raw] (caffeine) at (-4.4cm,-0.4cm) {Koffein\\Caffeine\\咖啡因};
+    \node[raw] (co2) at (0.0cm,-0.4cm) {CO2\\Kohlensäure\\二氧化碳};
+    \node[raw] (water) at (6.0cm,-3.6cm) {Wasser\\Water\\水};
+    
+    % Second row of raw materials
+    \node[raw, below=1cm of sugar] (citric) at (-6.0cm,-6.0cm) {Zitronensäure\\Citric Acid\\柠檬酸};
+    \node[raw] (flavor) at (-4.4cm,-9.6cm) {Aromen\\Flavors\\香料};
+    \node[raw] (color) at (-0.8cm,-9.6cm) {Farbstoff\\Color\\着色剂};
+    \node[raw] (pack) at (6.0cm,-6.0cm) {Verpackung\\Packaging\\包装};
+    
+    % Processing
+    \node[process, below=2cm of sugar] (mix) at (-2.4cm,-3.6cm) {Mischung\\Mixing\\混合};
+    \node[process] (carb) at (6.0cm,-0.4cm) {Karbonisierung\\Carbonation\\碳酸化};
+    \node[process] (fill) at (2.4cm,-9.6cm) {Abfüllung\\Filling\\灌装};
+    
+    % Final product
+    \node[final] (cola) at (6.0cm,-9.6cm) {Fritz-Kola\\Fertigprodukt\\成品};
+    
+    % Arrows from raw materials to mixing
+    \draw[arrow] (sugar) -- (mix);
+    \draw[arrow] (caffeine) -- (mix);
+    \draw[arrow] (co2) -- (carb);
+    \draw[arrow] (water) -- (mix);
+    \draw[arrow] (citric) -- (mix);
+    \draw[arrow] (flavor) -- (mix);
+    \draw[arrow] (color) -- (mix);
+    \draw[arrow] (pack) -- (fill);
+    
+    % Process arrows
+    \draw[arrow] (mix) -- node[right, font=\tiny] {Sirup} (carb);
+    \draw[arrow] (carb) -- node[right, font=\tiny] {Karbonisiert} (fill);
+    \draw[arrow] (fill) -- (cola);
+    
+    % Cost labels (optional, can be removed if too cluttered)
+    \node[above=0.2cm of sugar, font=\tiny, text=blue] {0.5-0.8€/kg};
+    \node[above=0.2cm of caffeine, font=\tiny, text=blue] {15-25€/kg};
+    \node[above=0.2cm of co2, font=\tiny, text=blue] {0.1-0.2€/kg};
+\end{tikzpicture}
+\caption{Detaillierter Rohstofffluss / Detailed Raw Materials Flow / 详细原材料流程}
+\end{figure}
+
+% Raw Materials Cost Distribution - Pie Chart
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    scale=1.0,
+    transform shape
+]
+    % Title
+    \node[text width=14cm, align=center, font=\large\bfseries] at (0,5.5) {
+        Rohstoffkostenverteilung / Raw Materials Cost Distribution / 原材料成本分布
+    };
+    
+    % Define percentages
+    \def\sugar{35}    % Zucker
+    \def\pack{25}     % Verpackung
+    \def\flavor{15}   % Aromen
+    \def\caffeine{10} % Koffein
+    \def\other{15}    % Sonstige
+    
+    % Calculate angles (starting from -90 degrees = top)
+    \def\startangle{-90}
+    \def\sugarangle{126}      % 35% of 360° = 126°
+    \def\packangle{90}        % 25% of 360° = 90°
+    \def\flavorangle{54}      % 15% of 360° = 54°
+    \def\caffeineangle{36}    % 10% of 360° = 36°
+    \def\otherangle{54}       % 15% of 360° = 54°
+    
+    % Pie chart center
+    \coordinate (center) at (0,2);
+    \def\radius{2.5}
+    
+    % Draw pie slices with 3D effect
+    % 1. Zucker (35%) - Blue
+    \filldraw[blue!70!black, draw=black, thick] 
+        (center) -- ++(\startangle:\radius) 
+        arc (\startangle:\startangle+\sugarangle:\radius) -- cycle;
+    \filldraw[blue!60, draw=black, thick] 
+        (center) -- ++(\startangle:\radius-0.1) 
+        arc (\startangle:\startangle+\sugarangle:\radius-0.1) -- cycle;
+    \node[white, font=\small\bfseries] at (\startangle+\sugarangle/2:\radius*0.7) {35\%};
+    
+    % 2. Verpackung (25%) - Green
+    \def\packstart{\startangle+\sugarangle}
+    \filldraw[green!70!black, draw=black, thick] 
+        (center) -- ++(\packstart:\radius) 
+        arc (\packstart:\packstart+\packangle:\radius) -- cycle;
+    \filldraw[green!60, draw=black, thick] 
+        (center) -- ++(\packstart:\radius-0.1) 
+        arc (\packstart:\packstart+\packangle:\radius-0.1) -- cycle;
+    \node[white, font=\small\bfseries] at (\packstart+\packangle/2:\radius*0.7) {25\%};
+    
+    % 3. Aromen (15%) - Yellow
+    \def\flavorstart{\packstart+\packangle}
+    \filldraw[yellow!70!orange, draw=black, thick] 
+        (center) -- ++(\flavorstart:\radius) 
+        arc (\flavorstart:\flavorstart+\flavorangle:\radius) -- cycle;
+    \filldraw[yellow!60, draw=black, thick] 
+        (center) -- ++(\flavorstart:\radius-0.1) 
+        arc (\flavorstart:\flavorstart+\flavorangle:\radius-0.1) -- cycle;
+    \node[black, font=\small\bfseries] at (\flavorstart+\flavorangle/2:\radius*0.7) {15\%};
+    
+    % 4. Koffein (10%) - Orange
+    \def\caffeinestart{\flavorstart+\flavorangle}
+    \filldraw[orange!70!red, draw=black, thick] 
+        (center) -- ++(\caffeinestart:\radius) 
+        arc (\caffeinestart:\caffeinestart+\caffeineangle:\radius) -- cycle;
+    \filldraw[orange!60, draw=black, thick] 
+        (center) -- ++(\caffeinestart:\radius-0.1) 
+        arc (\caffeinestart:\caffeinestart+\caffeineangle:\radius-0.1) -- cycle;
+    \node[white, font=\small\bfseries] at (\caffeinestart+\caffeineangle/2:\radius*0.7) {10\%};
+    
+    % 5. Sonstige (15%) - Red
+    \def\otherstart{\caffeinestart+\caffeineangle}
+    \filldraw[red!70!black, draw=black, thick] 
+        (center) -- ++(\otherstart:\radius) 
+        arc (\otherstart:\otherstart+\otherangle:\radius) -- cycle;
+    \filldraw[red!60, draw=black, thick] 
+        (center) -- ++(\otherstart:\radius-0.1) 
+        arc (\otherstart:\otherstart+\otherangle:\radius-0.1) -- cycle;
+    \node[white, font=\small\bfseries] at (\otherstart+\otherangle/2:\radius*0.7) {15\%};
+    
+    % Legend on the right
+    \node[text width=5cm, align=left, font=\small] at (5.5,3.5) {
+        \textbf{Legende / Legend / 图例:}
+    };
+    
+    % Legend items
+    \filldraw[blue!60, draw=black, thick] (4.5,2.8) rectangle (5,3);
+    \node[right, font=\tiny] at (5,2.9) {Zucker / Sugar / 糖 (35\%)};
+    
+    \filldraw[green!60, draw=black, thick] (4.5,2.3) rectangle (5,2.5);
+    \node[right, font=\tiny] at (5,2.4) {Verpackung / Packaging / 包装 (25\%)};
+    
+    \filldraw[yellow!60, draw=black, thick] (4.5,1.8) rectangle (5,2);
+    \node[right, font=\tiny] at (5,1.9) {Aromen / Flavors / 香料 (15\%)};
+    
+    \filldraw[orange!60, draw=black, thick] (4.5,1.3) rectangle (5,1.5);
+    \node[right, font=\tiny] at (5,1.4) {Koffein / Caffeine / 咖啡因 (10\%)};
+    
+    \filldraw[red!60, draw=black, thick] (4.5,0.8) rectangle (5,1);
+    \node[right, font=\tiny] at (5,0.9) {Sonstige / Other / 其他 (15\%)};
+    
+    % Total cost indicator
+    \node[draw=black!50, thick, fill=gray!10, rounded corners=5pt, text width=4cm, align=center, font=\small\bfseries] at (5.5,-2) {
+        \textbf{Anteil an\\Gesamtkosten}\\
+        \textcolor{blue}{\Large Raw Materials}\\
+        \textcolor{gray}{\small Cost Share}
+    };
+\end{tikzpicture}
+\caption{Rohstoffkostenverteilung / Raw Materials Cost Distribution / 原材料成本分布}
+\end{figure}
+
+% ============================================
+% TRANSPORT UND LOGISTIK / TRANSPORT AND LOGISTICS
+% ============================================
+\subsection{Transport und Logistik / Transport and Logistics / 运输与物流}
+
+% Transport and Logistics Flow Diagram
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    node distance=2cm,
+    supplier/.style={ellipse, draw, fill=blue!20, text width=2cm, text centered, font=\tiny},
+    transport/.style={rectangle, draw, fill=orange!20, text width=1.8cm, text centered, font=\tiny, minimum height=0.8cm},
+    warehouse/.style={rectangle, draw, fill=green!20, text width=2cm, text centered, font=\tiny, minimum height=1cm},
+    production/.style={rectangle, draw, fill=red!20, text width=2cm, text centered, font=\tiny, minimum height=1.2cm},
+    customer/.style={ellipse, draw, fill=yellow!20, text width=1.8cm, text centered, font=\tiny},
+    arrow/.style={->, >=Stealth, thick, blue},
+    label/.style={font=\tiny, sloped, above}
+]
+    % Suppliers
+    \node[supplier] (s1) {Zucker-\\lieferant};
+    \node[supplier, below=of s1] (s2) {Aromen-\\lieferant};
+    \node[supplier, below=of s2] (s3) {Verpackungs-\\lieferant};
+    
+    % Transport methods
+    \node[transport, right=of s1, xshift=1cm] (t1) {LKW\\Straße};
+    \node[transport, right=of s2, xshift=1cm] (t2) {Schiff\\See};
+    \node[transport, right=of s3, xshift=1cm] (t3) {LKW\\Straße};
+    
+    % Warehouse
+    \node[warehouse, right=of t2, xshift=1cm] (wh) {Lager\\Hamburg};
+    
+    % Production
+    \node[production, below=of wh, yshift=-0.5cm] (prod) {Produktion\\Hamburg};
+    
+    % Distribution
+    \node[transport, below=of prod, yshift=0cm] (dist1) {LKW\\40t};
+    \node[transport, left=of dist1, xshift=-1cm] (dist2) {LKW\\7.5t};
+    \node[transport, right=of dist1, xshift=0cm] (dist3) {Online\\Versand};
+    
+    % Customers
+    \node[customer, below=of dist1, yshift=0.5cm] (c1) {Einzel-\\handel};
+    \node[customer, left=of c1, xshift=-1cm] (c2) {Gastro-\\nomie};
+    \node[customer, right=of c1, xshift=-0.5cm] (c3) {Online-\\Kunden};
+    
+    % Arrows
+    \draw[arrow] (s1) -- (t1);
+    \draw[arrow] (s2) -- (t2);
+    \draw[arrow] (s3) -- (t3);
+    \draw[arrow] (t1) -- node[above, label] {Just-in-Time} (wh);
+    \draw[arrow] (t2) -- (wh);
+    \draw[arrow] (t3) -- (wh);
+    \draw[arrow] (wh) -- node[right, label] {Rohstoffe} (prod);
+    \draw[arrow] (prod) -- node[right, label] {Fertigprodukt} (dist1);
+    \draw[arrow] (prod) -- (dist2);
+    \draw[arrow] (prod) -- (dist3);
+    \draw[arrow] (dist1) -- (c1);
+    \draw[arrow] (dist2) -- (c2);
+    \draw[arrow] (dist3) -- (c3);
+    
+    % Legend
+    \node[below=0.3cm of c2, font=\tiny, text width=10cm, align=center] {
+        \textcolor{blue}{Rohstofffluss} | \textcolor{green}{Lagerung} | \textcolor{red}{Produktion} | \textcolor{orange}{Transport}
+    };
+\end{tikzpicture}
+\caption{Transport- und Logistikfluss / Transport and Logistics Flow / 运输与物流流程}
+\end{figure}
+
+\subsubsection{Deutsch}
+\textbf{Transportmethoden und Logistikketten:}
+
+\textbf{1. Rohstofftransport}
+\begin{itemize}
+\item \textbf{Straßentransport:} LKW mit 24-40 Tonnen Ladekapazität, Kühlfahrzeuge für temperaturempfindliche Güter
+\item \textbf{Schienentransport:} Für große Mengen (Zucker, CO2), kosteneffizient für Langstrecken
+\item \textbf{Seetransport:} Für Importe aus Übersee (Zuckerrohr, Aromen), Containerverladung
+\item \textbf{Just-in-Time:} Optimierte Lieferzyklen, Lagerhaltungskosten minimieren
+\item \textbf{Tracking:} GPS-Tracking, Echtzeit-Verfolgung aller Lieferungen
+\end{itemize}
+
+\textbf{2. Produktverteilung}
+\begin{itemize}
+\item \textbf{Primärverteilung:} Von Produktionsstätte zu regionalen Lagern (LKW, 40-Tonner)
+\item \textbf{Sekundärverteilung:} Von Lagern zu Einzelhändlern (Kleinlaster, 3.5-7.5 Tonnen)
+\item \textbf{Kühlkette:} Temperaturkontrolle bei Transport, Kühlfahrzeuge für gekühlte Produkte
+\item \textbf{Routenoptimierung:} Software-gestützte Planung, CO2-Reduzierung
+\item \textbf{Mehrweg-Systeme:} Rücktransport von Leergut, Kreislaufwirtschaft
+\end{itemize}
+
+\textbf{3. Lagerhaltung}
+\begin{itemize}
+\item \textbf{Hauptlager:} In Hamburg, 5000-10000 m², klimatisiert
+\item \textbf{Regionallager:} Berlin, München, Köln, jeweils 2000-3000 m²
+\item \textbf{Lagerverwaltung:} WMS (Warehouse Management System), automatische Kommissionierung
+\item \textbf{Lagerbestand:} 2-4 Wochen Produktionsbedarf, Sicherheitsbestände
+\end{itemize}
+
+\subsubsection{English}
+\textbf{Transport Methods and Logistics Chains:}
+
+\textbf{1. Raw Material Transport}
+\begin{itemize}
+\item \textbf{Road Transport:} Trucks with 24-40 ton capacity, refrigerated vehicles for temperature-sensitive goods
+\item \textbf{Rail Transport:} For large volumes (sugar, CO2), cost-effective for long distances
+\item \textbf{Sea Transport:} For imports from overseas (sugarcane, flavors), container loading
+\item \textbf{Just-in-Time:} Optimized delivery cycles, minimize inventory costs
+\item \textbf{Tracking:} GPS tracking, real-time monitoring of all deliveries
+\end{itemize}
+
+\textbf{2. Product Distribution}
+\begin{itemize}
+\item \textbf{Primary Distribution:} From production facility to regional warehouses (trucks, 40-ton vehicles)
+\item \textbf{Secondary Distribution:} From warehouses to retailers (light trucks, 3.5-7.5 tons)
+\item \textbf{Cold Chain:} Temperature control during transport, refrigerated vehicles for chilled products
+\item \textbf{Route Optimization:} Software-supported planning, CO2 reduction
+\item \textbf{Reusable Systems:} Return transport of empty containers, circular economy
+\end{itemize}
+
+\textbf{3. Warehousing}
+\begin{itemize}
+\item \textbf{Main Warehouse:} In Hamburg, 5000-10000 m², climate-controlled
+\item \textbf{Regional Warehouses:} Berlin, Munich, Cologne, each 2000-3000 m²
+\item \textbf{Warehouse Management:} WMS (Warehouse Management System), automated picking
+\item \textbf{Inventory:} 2-4 weeks production requirement, safety stocks
+\end{itemize}
+
+\subsubsection{中文}
+\textbf{运输方法和物流链:}
+
+\textbf{1. 原材料运输}
+\begin{itemize}
+\item \textbf{公路运输:} 载重24-40吨的卡车，对温度敏感货物使用冷藏车
+\item \textbf{铁路运输:} 用于大批量（糖、CO2），长距离成本效益高
+\item \textbf{海运:} 用于海外进口（甘蔗、香料），集装箱装载
+\item \textbf{准时制:} 优化的交付周期，最小化库存成本
+\item \textbf{跟踪:} GPS跟踪，实时监控所有交付
+\end{itemize}
+
+\textbf{2. 产品分销}
+\begin{itemize}
+\item \textbf{一级分销:} 从生产设施到区域仓库（卡车，40吨车辆）
+\item \textbf{二级分销:} 从仓库到零售商（轻型卡车，3.5-7.5吨）
+\item \textbf{冷链:} 运输过程中的温度控制，冷藏产品使用冷藏车
+\item \textbf{路线优化:} 软件支持的规划，减少CO2排放
+\item \textbf{可重复使用系统:} 空容器的回程运输，循环经济
+\end{itemize}
+
+\textbf{3. 仓储}
+\begin{itemize}
+\item \textbf{主仓库:} 在汉堡，5000-10000 m²，温控
+\item \textbf{区域仓库:} 柏林、慕尼黑、科隆，每个2000-3000 m²
+\item \textbf{仓库管理:} WMS（仓库管理系统），自动拣选
+\item \textbf{库存:} 2-4周生产需求，安全库存
+\end{itemize}
+
+% ============================================
+% MARKTANALYSE / MARKET ANALYSIS
+% ============================================
+\section{Marktanalyse / Market Analysis / 市场分析}
+
+\subsection{Deutsch}
+Die Marktanalyse zeigt folgende Trends:
+
+\begin{itemize}
+\item \textbf{Wachstum:} Steigende Nachfrage nach regionalen und nachhaltigen Produkten
+\item \textbf{Wettbewerb:} Starker Wettbewerb mit internationalen Marken (Coca-Cola, Pepsi)
+\item \textbf{Preispositionierung:} Premium-Segment mit höheren Preisen als Standard-Cola
+\item \textbf{Zielgruppe:} Umweltbewusste, junge Erwachsene, urbane Verbraucher
+\item \textbf{Vertriebskanäle:} Multi-Channel-Strategie (Offline und Online)
+\end{itemize}
+
+\subsection{English}
+The market analysis shows the following trends:
+
+\begin{itemize}
+\item \textbf{Growth:} Increasing demand for regional and sustainable products
+\item \textbf{Competition:} Strong competition with international brands (Coca-Cola, Pepsi)
+\item \textbf{Price Positioning:} Premium segment with higher prices than standard cola
+\item \textbf{Target Group:} Environmentally conscious, young adults, urban consumers
+\item \textbf{Distribution Channels:} Multi-channel strategy (offline and online)
+\end{itemize}
+
+\subsection{中文}
+市场分析显示以下趋势：
+
+\begin{itemize}
+\item \textbf{增长:} 对区域性和可持续产品的需求不断增长
+\item \textbf{竞争:} 与国际品牌（可口可乐、百事可乐）的激烈竞争
+\item \textbf{价格定位:} 高端市场，价格高于标准可乐
+\item \textbf{目标群体:} 环保意识强的年轻成年人、城市消费者
+\item \textbf{分销渠道:} 多渠道策略（线下和线上）
+\end{itemize}
+
+% Market Analysis Table
+\begin{table}[H]
+\centering
+\caption{Marktvergleich / Market Comparison / 市场对比}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Kriterium / Criterion / 标准} & \textbf{Fritz-Kola} & \textbf{Coca-Cola} & \textbf{Pepsi} \\
+\midrule
+Koffeingehalt (mg/100ml) & 25 & 10 & 10 \\
+Preis (€/L) & 2.50-3.00 & 1.50-2.00 & 1.50-2.00 \\
+Nachhaltigkeit & Hoch & Mittel & Mittel \\
+Unabhängigkeit & Ja & Nein & Nein \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Market Share Diagram
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+    \begin{axis}[
+        ybar,
+        bar width=0.6cm,
+        width=12cm,
+        height=8cm,
+        ylabel={Marktanteil (\%) / Market Share (\%) / 市场份额 (\%)},
+        symbolic x coords={Coca-Cola, Pepsi, Fritz-Kola, Andere},
+        xtick=data,
+        legend pos=north west,
+        ymin=0,
+        ymax=100
+    ]
+        \addplot coordinates {(Coca-Cola, 45) (Pepsi, 25) (Fritz-Kola, 3) (Andere, 27)};
+        \legend{Marktanteil}
+    \end{axis}
+\end{tikzpicture}
+\caption{Marktanteile im deutschen Cola-Markt / Market Shares in German Cola Market / 德国可乐市场份额}
+\end{figure}
+
+% ============================================
+% ZUSÄTZLICHE ANALYSEN / ADDITIONAL ANALYSES
+% ============================================
+\section{Zusätzliche Analysen / Additional Analyses / 其他分析}
+
+\subsection{Umweltanalyse / Environmental Analysis / 环境分析}
+
+\subsubsection{Deutsch}
+Fritz-Kola legt großen Wert auf Nachhaltigkeit:
+\begin{itemize}
+\item Verwendung von regionalen Zutaten wo möglich
+\item Nachhaltige Verpackungslösungen (Glasflaschen, Recycling)
+\item CO2-neutrale Produktion angestrebt
+\item Unterstützung lokaler Lieferanten
+\end{itemize}
+
+\subsubsection{English}
+Fritz-Kola places great emphasis on sustainability:
+\begin{itemize}
+\item Use of regional ingredients where possible
+\item Sustainable packaging solutions (glass bottles, recycling)
+\item CO2-neutral production targeted
+\item Support for local suppliers
+\end{itemize}
+
+\subsubsection{中文}
+Fritz-Kola 非常重视可持续性：
+\begin{itemize}
+\item 尽可能使用区域成分
+\item 可持续包装解决方案（玻璃瓶、回收）
+\item 目标实现二氧化碳中性生产
+\item 支持本地供应商
+\end{itemize}
+
+\subsection{Konsumentenverhalten / Consumer Behavior / 消费者行为}
+
+\subsubsection{Deutsch}
+Die Zielgruppe von Fritz-Kola zeigt folgende Charakteristika:
+\begin{itemize}
+\item Hohe Bereitschaft, für Qualität und Nachhaltigkeit zu zahlen
+\item Starke Markenloyalität bei unabhängigen Marken
+\item Aktive Nutzung sozialer Medien zur Markeninteraktion
+\item Präferenz für lokale und regionale Produkte
+\end{itemize}
+
+\subsubsection{English}
+Fritz-Kola's target group shows the following characteristics:
+\begin{itemize}
+\item High willingness to pay for quality and sustainability
+\item Strong brand loyalty to independent brands
+\item Active use of social media for brand interaction
+\item Preference for local and regional products
+\end{itemize}
+
+\subsubsection{中文}
+Fritz-Kola 的目标群体表现出以下特征：
+\begin{itemize}
+\item 愿意为质量和可持续性支付更高价格
+\item 对独立品牌有强烈的品牌忠诚度
+\item 积极使用社交媒体进行品牌互动
+\item 偏好本地和区域产品
+\end{itemize}
+
+\subsection{Technologie und Innovation / Technology and Innovation / 技术与创新}
+
+\subsubsection{Deutsch}
+Fritz-Kola nutzt moderne Produktionstechnologien:
+\begin{itemize}
+\item Automatisierte Abfüllanlagen
+\item Qualitätskontrolle durch moderne Sensorik
+\item Digitale Bestellsysteme für Händler
+\item Online-Vertriebsplattformen
+\end{itemize}
+
+\subsubsection{English}
+Fritz-Kola uses modern production technologies:
+\begin{itemize}
+\item Automated bottling plants
+\item Quality control through modern sensors
+\item Digital ordering systems for dealers
+\item Online sales platforms
+\end{itemize}
+
+\subsubsection{中文}
+Fritz-Kola 使用现代生产技术：
+\begin{itemize}
+\item 自动化灌装设备
+\item 通过现代传感器进行质量控制
+\item 经销商数字订购系统
+\item 在线销售平台
+\end{itemize}
+
+% ============================================
+% BUSINESS GUIDE: AUFBAU EINES COLA-UNTERNEHMENS
+% ============================================
+\section{Business Guide: Aufbau eines Cola-Unternehmens / Business Guide: Building a Cola Company / 商业指南：建立可乐公司}
+
+\subsection{Deutsch}
+Dieser Abschnitt bietet eine umfassende Anleitung zum Aufbau eines Cola-Unternehmens wie Fritz-Kola, mit allen notwendigen Schritten und Details.
+
+\textbf{Phase 1: Vorbereitung und Planung (6-12 Monate)}
+
+\textbf{1.1 Marktforschung und Geschäftskonzept}
+\begin{itemize}
+\item \textbf{Marktanalyse:} Zielgruppen identifizieren, Wettbewerber analysieren, Marktlücken finden
+\item \textbf{Unique Selling Proposition (USP):} Was macht Ihr Produkt einzigartig? (z.B. hoher Koffeingehalt, Bio-Zutaten, regionale Herkunft)
+\item \textbf{Geschäftsmodell:} B2B (Gastronomie), B2C (Einzelhandel), Online-Vertrieb, oder Mix
+\item \textbf{Finanzplanung:} Startup-Kapitalbedarf (500.000 - 2.000.000 €), Break-even-Analyse, 5-Jahres-Prognose
+\item \textbf{Rechtliche Struktur:} GmbH, UG, oder KG wählen, Gesellschaftsvertrag erstellen
+\end{itemize}
+
+\textbf{1.2 Rezeptentwicklung}
+\begin{itemize}
+\item \textbf{Rezeptformulierung:} Experimentieren mit verschiedenen Zutatenverhältnissen
+\item \textbf{Geschmackstests:} Fokusgruppen, Blindverkostungen, Iterationen
+\item \textbf{Regulatorische Compliance:} EU-Lebensmittelverordnungen, Zusatzstoffzulassungen prüfen
+\item \textbf{Rezeptur-Schutz:} Geheimhaltungsvereinbarungen, mögliche Patentierung prüfen
+\item \textbf{Skalierung:} Rezeptur für Massenproduktion anpassen
+\end{itemize}
+
+\textbf{1.3 Standortauswahl}
+\begin{itemize}
+\item \textbf{Kriterien:} Zugang zu Wasser, Transportinfrastruktur, Arbeitskräfte, Mietkosten
+\item \textbf{Flächenbedarf:} Mindestens 2000-5000 m² für Produktion, Lager, Büros
+\item \textbf{Genehmigungen:} Baugenehmigung, Lebensmittelbetriebszulassung, Umweltgenehmigung
+\item \textbf{Infrastruktur:} Strom (mindestens 400kW), Wasser (50-100 m³/Tag), Abwasserentsorgung
+\end{itemize}
+
+\textbf{Phase 2: Rechtliche und Regulatorische Anforderungen (3-6 Monate)}
+
+\textbf{2.1 Unternehmensgründung}
+\begin{itemize}
+\item \textbf{Gesellschaftsform:} GmbH empfohlen (Haftungsbeschränkung, Glaubwürdigkeit)
+\item \textbf{Notar:} Gesellschaftsvertrag notariell beurkunden
+\item \textbf{Handelsregister:} Eintragung beim Amtsgericht
+\item \textbf{Gewerbeanmeldung:} Bei örtlicher Behörde
+\item \textbf{Steuerberater:} USt-ID beantragen, Steuerberatung einrichten
+\end{itemize}
+
+\textbf{2.2 Lebensmittelrechtliche Zulassungen}
+\begin{itemize}
+\item \textbf{Lebensmittelbetriebsregistrierung:} Bei zuständiger Behörde (Veterinär- oder Gesundheitsamt)
+\item \textbf{HACCP-Konzept:} Gefahrenanalyse und kritische Kontrollpunkte dokumentieren
+\item \textbf{Allergenkennzeichnung:} EU-Verordnung 1169/2011 beachten
+\item \textbf{Nährwertkennzeichnung:} Nährwerttabelle erstellen, ggf. Nährwertanalyse durch Labor
+\item \textbf{Verpackungsrichtlinien:} EU-Verpackungsrichtlinie, Pfand-Systeme
+\end{itemize}
+
+\textbf{2.3 Versicherungen}
+\begin{itemize}
+\item \textbf{Betriebshaftpflicht:} Mindestens 5 Mio. € Deckung
+\item \textbf{Produkthaftpflicht:} Für Lebensmittelhersteller obligatorisch
+\item \textbf{Betriebsunterbrechungsversicherung:} Schutz bei Produktionsausfällen
+\item \textbf{Transportversicherung:} Für Warentransporte
+\end{itemize}
+
+\textbf{Phase 3: Produktionsanlagen und Ausrüstung (6-12 Monate)}
+
+% Production Line Diagram
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    node distance=2.5cm,
+    machine/.style={rectangle, draw, fill=blue!15, text width=2.2cm, text centered, font=\tiny, minimum height=1.2cm, rounded corners},
+    storage/.style={cylinder, draw, fill=green!15, text width=1.8cm, text centered, font=\tiny, minimum height=1cm, shape border rotate=90},
+    qc/.style={diamond, draw, fill=yellow!20, text width=1.5cm, text centered, font=\tiny, aspect=1.5},
+    arrow/.style={->, >=Stealth, thick, blue},
+    label/.style={font=\tiny, above, sloped}
+]
+    % Water treatment
+    \node[machine] (water) at (-7.2cm,0.8cm) {Wasser-\\aufbereitung\\150-300k€};
+    
+    % Storage tanks
+    \node[storage] (tank1) at (-3.2cm,0.8cm) {Wasser-\\tank};
+    \node[storage] (tank2) at (-3.2cm,-3.2cm) {Sirup-\\tank};
+    
+    % Mixing
+    \node[machine] (mix) at (0.4cm,0.8cm) {Misch-\\anlage\\200-500k€};
+    
+    % Carbonation
+    \node[machine] (carb) at (0.4cm,-3.2cm) {Karboni-\\sierung\\100-200k€};
+    
+    % Filling
+    \node[machine] (fill) at (-3.2cm,-6.4cm) {Abfüll-\\anlage\\300-800k€};
+    
+    % Capping
+    \node[machine] (cap) at (-3.2cm,-9.2cm) {Verschließ-\\anlage\\50-150k€};
+    
+    % Labeling
+    \node[machine] (label) at (-3.2cm,-14.0cm) {Etikettier-\\anlage\\50-100k€};
+    
+    % Quality control
+    \node[qc] (qc1) at (-7.2cm,-6.4cm) {QC};
+    \node[qc] (qc2) at (1.2cm,-11.6cm) {QC};
+    
+    % Packaging
+    \node[machine] (pack) at (-7.2cm,-9.2cm) {Verpackung\\100-200k€};
+    
+    % Final product
+    \node[storage] (final) at (-7.2cm,-14.0cm) {Fertig-\\produkt};
+    
+    % Arrows
+    \draw[arrow] (water) -- node[above, label] {Aufbereitet} (tank1);
+    \draw[arrow] (tank1) -- (mix);
+    \draw[arrow] (tank2) -- (mix);
+    \draw[arrow] (mix) -- node[above, label] {Sirup} (carb);
+    \draw[arrow] (carb) -- node[above, label] {Karbonisiert} (fill);
+    \draw[arrow] (fill) -- node[above, label] {Gefüllt} (cap);
+    \draw[arrow] (cap) -- node[above, label] {Verschlossen} (label);
+    \draw[arrow] (fill) -- (qc1);
+    \draw[arrow] (label) -- (qc2);
+    \draw[arrow] (label) -- node[above, label] {Etikettiert} (pack);
+    \draw[arrow] (pack) -- node[above, label] {Verpackt} (final);
+    
+    % Production rate
+    \node[below=0.5cm of qc1, font=\tiny, text width=12cm, align=center] {
+        \textbf{Produktionskapazität: 3000-10000 Flaschen/Stunde / Production Capacity: 3000-10000 bottles/hour / 生产能力：3000-10000瓶/小时}
+    };
+\end{tikzpicture}
+\caption{Produktionslinie / Production Line / 生产线}
+\end{figure}
+
+\textbf{3.1 Produktionslinie}
+\begin{itemize}
+\item \textbf{Wasseraufbereitungsanlage:} Umkehrosmose, Aktivkohlefilter, UV-Desinfektion (150.000-300.000 €)
+\item \textbf{Misch- und Dosieranlage:} Automatische Dosierung aller Zutaten (200.000-500.000 €)
+\item \textbf{Karbonisierungsanlage:} CO2-Einleitung, Druckregelung (100.000-200.000 €)
+\item \textbf{Abfüllanlage:} Für Flaschen und/oder Dosen, 3000-10000 Flaschen/Stunde (300.000-800.000 €)
+\item \textbf{Verschließanlage:} Kronkorken- oder Schraubverschluss-Maschine (50.000-150.000 €)
+\item \textbf{Etikettiermaschine:} Automatische Etikettierung (50.000-100.000 €)
+\item \textbf{Verpackungsanlage:} Kartonierung, Palettierung (100.000-200.000 €)
+\item \textbf{Qualitätskontrolle:} Laborausrüstung, pH-Meter, Refraktometer (20.000-50.000 €)
+\end{itemize}
+
+\textbf{3.2 Lagerausrüstung}
+\begin{itemize}
+\item \textbf{Kühlanlagen:} Für gekühlte Lagerung (50.000-150.000 €)
+\item \textbf{Regalsysteme:} Hochregallager für effiziente Nutzung (30.000-100.000 €)
+\item \textbf{Gabelstapler:} Elektro-Gabelstapler (20.000-40.000 € pro Stück)
+\item \textbf{WMS-Software:} Warehouse Management System (10.000-50.000 €)
+\end{itemize}
+
+\textbf{3.3 Gebäudeausstattung}
+\begin{itemize}
+\item \textbf{Sanitäranlagen:} Hygienische Waschräume, Umkleiden
+\item \textbf{Büroräume:} Verwaltung, Qualitätskontrolle, Besprechungsräume
+\item \textbf{Sicherheit:} Alarmanlage, Videoüberwachung, Zutrittskontrolle
+\end{itemize}
+
+\textbf{Phase 4: Personal und Organisation (3-6 Monate)}
+
+\textbf{4.1 Schlüsselpositionen}
+\begin{itemize}
+\item \textbf{Geschäftsführung:} Strategische Leitung, Investor Relations
+\item \textbf{Produktionsleiter:} Tägliche Produktionsüberwachung, Qualitätssicherung
+\item \textbf{Vertriebsleiter:} Kundenakquise, Vertriebsstrategie
+\item \textbf{Qualitätsmanager:} HACCP, Qualitätskontrolle, Zertifizierungen
+\item \textbf{Marketing-Manager:} Branding, Werbung, Social Media
+\item \textbf{Controller:} Finanzen, Buchhaltung, Reporting
+\end{itemize}
+
+\textbf{4.2 Produktionspersonal}
+\begin{itemize}
+\item \textbf{Anlagenführer:} 2-3 Schichten, je 2-3 Personen
+\item \textbf{Qualitätskontrolleure:} 2-4 Personen für kontinuierliche Kontrolle
+\item \textbf{Lagerarbeiter:} 3-5 Personen für Ein- und Auslagerung
+\item \textbf{Wartungstechniker:} 1-2 Personen für Anlagenwartung
+\end{itemize}
+
+\textbf{4.3 Ausbildung und Zertifizierung}
+\begin{itemize}
+\item \textbf{HACCP-Schulung:} Für alle Mitarbeiter mit Lebensmittelkontakt
+\item \textbf{Anlagenschulung:} Herstellerschulungen für neue Anlagen
+\item \textbf{Erste-Hilfe:} Erste-Hilfe-Kurse, Sicherheitsschulungen
+\end{itemize}
+
+\textbf{Phase 5: Beschaffung und Lieferantenmanagement (3-6 Monate)}
+
+\textbf{5.1 Lieferantenauswahl}
+\begin{itemize}
+\item \textbf{Mehrere Lieferanten:} Für kritische Rohstoffe (Risikominimierung)
+\item \textbf{Qualitätsaudits:} Besichtigung von Lieferantenbetrieben
+\item \textbf{Verträge:} Rahmenverträge, Preisvereinbarungen, Lieferbedingungen
+\item \textbf{Zertifizierungen:} ISO 22000, BRC, IFS bevorzugen
+\end{itemize}
+
+\textbf{5.2 Beschaffungsstrategie}
+\begin{itemize}
+\item \textbf{Just-in-Time:} Minimierung der Lagerkosten
+\item \textbf{Sicherheitsbestände:} 2-4 Wochen für kritische Rohstoffe
+\item \textbf{Preisverhandlungen:} Mengenrabatte, langfristige Verträge
+\end{itemize}
+
+\textbf{Phase 6: Marketing und Branding (laufend)}
+
+\textbf{6.1 Markenentwicklung}
+\begin{itemize}
+\item \textbf{Markenname:} Einzigartig, einprägsam, rechtlich schützbar
+\item \textbf{Logo-Design:} Professionelles Design, verschiedene Formate
+\item \textbf{Verpackungsdesign:} Attraktiv, funktional, nachhaltig
+\item \textbf{Markenschutz:} Markenanmeldung beim DPMA (Deutsches Patent- und Markenamt)
+\end{itemize}
+
+\textbf{6.2 Marketingstrategie}
+\begin{itemize}
+\item \textbf{Online-Marketing:} Website, Social Media (Instagram, Facebook, TikTok)
+\item \textbf{Event-Marketing:} Festivals, Events, Sponsoring
+\item \textbf{PR:} Pressearbeit, Influencer-Kooperationen
+\item \textbf{Point-of-Sale:} Werbematerial für Einzelhändler
+\end{itemize}
+
+\textbf{Phase 7: Vertriebsaufbau (laufend)}
+
+\textbf{7.1 Vertriebskanäle}
+\begin{itemize}
+\item \textbf{Gastronomie:} Restaurants, Bars, Cafés (Direktvertrieb)
+\item \textbf{Einzelhandel:} Supermärkte, Getränkemärkte, Bio-Läden
+\item \textbf{Online:} Eigenes Online-Shop, Amazon, andere Plattformen
+\item \textbf{Großhandel:} Cash \& Carry, Großhändler
+\end{itemize}
+
+\textbf{7.2 Vertriebsstrategie}
+\begin{itemize}
+\item \textbf{Regionale Expansion:} Schrittweise Ausweitung des Vertriebsgebiets
+\item \textbf{Preisstrategie:} Premium-Positionierung oder Massenmarkt
+\item \textbf{Promotionen:} Einführungsangebote, Sonderaktionen
+\end{itemize}
+
+\textbf{Phase 8: Qualitätssicherung und Zertifizierung (laufend)}
+
+\textbf{8.1 Qualitätssysteme}
+\begin{itemize}
+\item \textbf{HACCP:} Obligatorisch für Lebensmittelbetriebe
+\item \textbf{ISO 22000:} Lebensmittelsicherheits-Managementsystem
+\item \textbf{IFS Food:} International Featured Standard (für Einzelhandel)
+\item \textbf{BRC:} British Retail Consortium Standard
+\end{itemize}
+
+\textbf{8.2 Kontinuierliche Verbesserung}
+\begin{itemize}
+\item \textbf{KPI-Monitoring:} Qualitätskennzahlen, Produktionsausbeute
+\item \textbf{Kundenfeedback:} Beschwerdemanagement, Produktverbesserungen
+\item \textbf{Interne Audits:} Regelmäßige Überprüfungen
+\end{itemize}
+
+% Business Process Flow Diagram
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    node distance=1.8cm,
+    phase/.style={rectangle, rounded corners, draw, fill=blue!15, text width=2.8cm, text centered, font=\small, minimum height=1.5cm},
+    decision/.style={diamond, draw, fill=yellow!20, text width=2cm, text centered, font=\tiny, aspect=2},
+    process/.style={rectangle, draw, fill=green!15, text width=2.5cm, text centered, font=\tiny, minimum height=1cm},
+    arrow/.style={->, >=Stealth, thick},
+    label/.style={font=\tiny, sloped}
+]
+    % Phase boxes
+    \node[phase] (p1) {Phase 1\\Vorbereitung\\Preparation\\准备};
+    \node[phase, right=of p1] (p2) {Phase 2\\Rechtliches\\Legal\\法律};
+    \node[phase, right=of p2] (p3) {Phase 3\\Anlagen\\Equipment\\设备};
+    \node[phase, below=of p1] (p4) {Phase 4\\Personal\\Personnel\\人员};
+    \node[phase, right=of p4] (p5) {Phase 5\\Beschaffung\\Procurement\\采购};
+    \node[phase, right=of p5] (p6) {Phase 6\\Marketing\\Marketing\\营销};
+    \node[phase, below=of p4] (p7) {Phase 7\\Vertrieb\\Sales\\销售};
+    \node[phase, right=of p7] (p8) {Phase 8\\Qualität\\Quality\\质量};
+    
+    % Arrows showing flow
+    \draw[arrow] (p1) -- node[above, label] {6-12 Monate} (p2);
+    \draw[arrow] (p2) -- node[above, label] {3-6 Monate} (p3);
+    \draw[arrow] (p3) -- node[right, label] {6-12 Monate} (p4);
+    \draw[arrow] (p4) -- node[above, label] {3-6 Monate} (p5);
+    \draw[arrow] (p5) -- node[above, label] {3-6 Monate} (p6);
+    \draw[arrow] (p6) -- node[right, label] {laufend} (p7);
+    \draw[arrow] (p7) -- node[above, label] {laufend} (p8);
+    
+    % Feedback loop
+    \draw[arrow, dashed, bend right=30] (p8) to node[left, label, pos=0.3] {Verbesserung} (p4);
+    
+    % Timeline indicator
+    \node[below=0.5cm of p7, font=\tiny, text width=8cm, align=center] {
+        \textbf{Gesamtzeit: 30+ Monate bis Markteinführung / Total Time: 30+ months to market launch / 总时间：30+个月至市场推出}
+    };
+\end{tikzpicture}
+\caption{Business-Prozess-Flussdiagramm / Business Process Flow Diagram / 业务流程流程图}
+\end{figure}
+
+% Startup Cost Distribution - Pie Chart
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    scale=1.0,
+    transform shape
+]
+    % Title
+    \node[text width=14cm, align=center, font=\large\bfseries] at (0,5.5) {
+        Startup-Kostenverteilung / Startup Cost Distribution / 启动成本分布\\
+        \textcolor{gray}{\normalsize Mittelwert: 4.7 Mio. € / Average: 4.7M € / 平均：470万€}
+    };
+    
+    % Define percentages
+    \def\equip{38}      % Produktionsanlagen
+    \def\building{23}  % Gebäude
+    \def\working{15}    % Arbeitskapital
+    \def\marketing{8}   % Marketing
+    \def\warehouse{5}   % Lager
+    \def\other{11}      % Sonstiges
+    
+    % Calculate angles (starting from -90 degrees = top)
+    \def\startangle{-90}
+    \def\equipangle{136.8}    % 38% of 360° = 136.8°
+    \def\buildingangle{82.8}  % 23% of 360° = 82.8°
+    \def\workingangle{54}     % 15% of 360° = 54°
+    \def\marketingangle{28.8}  % 8% of 360° = 28.8°
+    \def\warehouseangle{18}   % 5% of 360° = 18°
+    \def\otherangle{39.6}     % 11% of 360° = 39.6°
+    
+    % Pie chart center
+    \coordinate (center) at (0,2);
+    \def\radius{2.5}
+    
+    % Draw pie slices with 3D effect
+    % 1. Produktionsanlagen (38%) - Blue
+    \filldraw[blue!70!black, draw=black, thick] 
+        (center) -- ++(\startangle:\radius) 
+        arc (\startangle:\startangle+\equipangle:\radius) -- cycle;
+    \filldraw[blue!60, draw=black, thick] 
+        (center) -- ++(\startangle:\radius-0.1) 
+        arc (\startangle:\startangle+\equipangle:\radius-0.1) -- cycle;
+    \node[white, font=\small\bfseries] at (\startangle+\equipangle/2:\radius*0.7) {38\%};
+    
+    % 2. Gebäude (23%) - Green
+    \def\buildingstart{\startangle+\equipangle}
+    \filldraw[green!70!black, draw=black, thick] 
+        (center) -- ++(\buildingstart:\radius) 
+        arc (\buildingstart:\buildingstart+\buildingangle:\radius) -- cycle;
+    \filldraw[green!60, draw=black, thick] 
+        (center) -- ++(\buildingstart:\radius-0.1) 
+        arc (\buildingstart:\buildingstart+\buildingangle:\radius-0.1) -- cycle;
+    \node[white, font=\small\bfseries] at (\buildingstart+\buildingangle/2:\radius*0.7) {23\%};
+    
+    % 3. Arbeitskapital (15%) - Yellow
+    \def\workingstart{\buildingstart+\buildingangle}
+    \filldraw[yellow!70!orange, draw=black, thick] 
+        (center) -- ++(\workingstart:\radius) 
+        arc (\workingstart:\workingstart+\workingangle:\radius) -- cycle;
+    \filldraw[yellow!60, draw=black, thick] 
+        (center) -- ++(\workingstart:\radius-0.1) 
+        arc (\workingstart:\workingstart+\workingangle:\radius-0.1) -- cycle;
+    \node[black, font=\small\bfseries] at (\workingstart+\workingangle/2:\radius*0.7) {15\%};
+    
+    % 4. Marketing (8%) - Orange
+    \def\marketingstart{\workingstart+\workingangle}
+    \filldraw[orange!70!red, draw=black, thick] 
+        (center) -- ++(\marketingstart:\radius) 
+        arc (\marketingstart:\marketingstart+\marketingangle:\radius) -- cycle;
+    \filldraw[orange!60, draw=black, thick] 
+        (center) -- ++(\marketingstart:\radius-0.1) 
+        arc (\marketingstart:\marketingstart+\marketingangle:\radius-0.1) -- cycle;
+    \node[white, font=\small\bfseries] at (\marketingstart+\marketingangle/2:\radius*0.7) {8\%};
+    
+    % 5. Lager (5%) - Red
+    \def\warehousestart{\marketingstart+\marketingangle}
+    \filldraw[red!70!black, draw=black, thick] 
+        (center) -- ++(\warehousestart:\radius) 
+        arc (\warehousestart:\warehousestart+\warehouseangle:\radius) -- cycle;
+    \filldraw[red!60, draw=black, thick] 
+        (center) -- ++(\warehousestart:\radius-0.1) 
+        arc (\warehousestart:\warehousestart+\warehouseangle:\radius-0.1) -- cycle;
+    \node[white, font=\small\bfseries] at (\warehousestart+\warehouseangle/2:\radius*0.7) {5\%};
+    
+    % 6. Sonstiges (11%) - Purple
+    \def\otherstart{\warehousestart+\warehouseangle}
+    \filldraw[purple!70!black, draw=black, thick] 
+        (center) -- ++(\otherstart:\radius) 
+        arc (\otherstart:\otherstart+\otherangle:\radius) -- cycle;
+    \filldraw[purple!60, draw=black, thick] 
+        (center) -- ++(\otherstart:\radius-0.1) 
+        arc (\otherstart:\otherstart+\otherangle:\radius-0.1) -- cycle;
+    \node[white, font=\small\bfseries] at (\otherstart+\otherangle/2:\radius*0.7) {11\%};
+    
+    % Legend on the right
+    \node[text width=5.5cm, align=left, font=\small\bfseries] at (5.5,4) {
+        Legende / Legend / 图例:
+    };
+    
+    % Legend items with values
+    \filldraw[blue!60, draw=black, thick] (4.5,3.3) rectangle (5,3.5);
+    \node[right, font=\tiny] at (5,3.4) {Produktionsanlagen / Equipment / 生产设备 (38\%)};
+    \node[right, font=\tiny, text=gray] at (7.5,3.4) {1.8M €};
+    
+    \filldraw[green!60, draw=black, thick] (4.5,2.6) rectangle (5,2.8);
+    \node[right, font=\tiny] at (5,2.7) {Gebäude / Building / 建筑 (23\%)};
+    \node[right, font=\tiny, text=gray] at (7.5,2.7) {1.1M €};
+    
+    \filldraw[yellow!60, draw=black, thick] (4.5,1.9) rectangle (5,2.1);
+    \node[right, font=\tiny] at (5,2) {Arbeitskapital / Working Capital / 营运资金 (15\%)};
+    \node[right, font=\tiny, text=gray] at (7.5,2) {705k €};
+    
+    \filldraw[orange!60, draw=black, thick] (4.5,1.2) rectangle (5,1.4);
+    \node[right, font=\tiny] at (5,1.3) {Marketing (8\%)};
+    \node[right, font=\tiny, text=gray] at (7.5,1.3) {376k €};
+    
+    \filldraw[red!60, draw=black, thick] (4.5,0.5) rectangle (5,0.7);
+    \node[right, font=\tiny] at (5,0.6) {Lager / Warehouse / 仓库 (5\%)};
+    \node[right, font=\tiny, text=gray] at (7.5,0.6) {235k €};
+    
+    \filldraw[purple!60, draw=black, thick] (4.5,-0.2) rectangle (5,0);
+    \node[right, font=\tiny] at (5,-0.1) {Sonstiges / Other / 其他 (11\%)};
+    \node[right, font=\tiny, text=gray] at (7.5,-0.1) {517k €};
+    
+    % Total cost box
+    \node[draw=black!50, thick, fill=gray!10, rounded corners=5pt, text width=4cm, align=center, font=\small\bfseries] at (5.5,-1.5) {
+        \textbf{Gesamt / Total / 总计}\\
+        \textcolor{blue}{\Large 4.7 Mio. €}\\
+        \textcolor{gray}{\small (2.9 - 6.5 Mio. €)}
+    };
+\end{tikzpicture}
+\caption{Startup-Kostenverteilung / Startup Cost Distribution / 启动成本分布}
+\end{figure}
+
+\textbf{Finanzübersicht (Geschätzte Kosten)}
+
+\begin{table}[H]
+\centering
+\caption{Startup-Kostenübersicht / Startup Cost Overview / 启动成本概览}
+\begin{tabular}{lr}
+\toprule
+\textbf{Position / Item / 项目} & \textbf{Kosten (€) / Cost (€) / 成本 (€)} \\
+\midrule
+Gebäude (Kauf oder Miete 5 Jahre) & 500.000 - 1.500.000 \\
+Produktionsanlagen & 1.200.000 - 2.500.000 \\
+Lagerausrüstung & 150.000 - 300.000 \\
+Büroausstattung & 50.000 - 100.000 \\
+Anlaufkosten (Rezept, Tests) & 100.000 - 200.000 \\
+Marketing \& Branding & 200.000 - 500.000 \\
+Arbeitskapital (6 Monate) & 500.000 - 1.000.000 \\
+Reserve & 200.000 - 400.000 \\
+\midrule
+\textbf{Gesamt / Total / 总计} & \textbf{2.900.000 - 6.500.000} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Zeitplan (Realistischer Ablauf)}
+
+\begin{itemize}
+\item \textbf{Monat 1-6:} Marktforschung, Rezeptentwicklung, Geschäftskonzept
+\item \textbf{Monat 7-12:} Finanzierung, Standortauswahl, rechtliche Gründung
+\item \textbf{Monat 13-18:} Gebäudeausbau, Anlagenbeschaffung, Personalrekrutierung
+\item \textbf{Monat 19-24:} Anlageninstallation, Testproduktion, Zertifizierungen
+\item \textbf{Monat 25-30:} Markteinführung, Vertriebsaufbau, Marketing
+\item \textbf{Monat 31+:} Expansion, Optimierung, Skalierung
+\end{itemize}
+
+\subsection{English}
+This section provides a comprehensive guide to building a cola company like Fritz-Kola, with all necessary steps and details.
+
+\textbf{Phase 1: Preparation and Planning (6-12 months)}
+
+\textbf{1.1 Market Research and Business Concept}
+\begin{itemize}
+\item \textbf{Market Analysis:} Identify target groups, analyze competitors, find market gaps
+\item \textbf{Unique Selling Proposition (USP):} What makes your product unique? (e.g., high caffeine content, organic ingredients, regional origin)
+\item \textbf{Business Model:} B2B (gastronomy), B2C (retail), online sales, or mix
+\item \textbf{Financial Planning:} Startup capital requirement (500,000 - 2,000,000 €), break-even analysis, 5-year forecast
+\item \textbf{Legal Structure:} Choose GmbH, UG, or KG, create articles of association
+\end{itemize}
+
+\textbf{1.2 Recipe Development}
+\begin{itemize}
+\item \textbf{Recipe Formulation:} Experiment with different ingredient ratios
+\item \textbf{Taste Tests:} Focus groups, blind tastings, iterations
+\item \textbf{Regulatory Compliance:} Check EU food regulations, additive approvals
+\item \textbf{Recipe Protection:} Confidentiality agreements, consider patenting
+\item \textbf{Scaling:} Adapt recipe for mass production
+\end{itemize}
+
+\textbf{1.3 Location Selection}
+\begin{itemize}
+\item \textbf{Criteria:} Access to water, transport infrastructure, workforce, rental costs
+\item \textbf{Space Requirements:} At least 2000-5000 m² for production, warehouse, offices
+\item \textbf{Permits:} Building permit, food business approval, environmental permit
+\item \textbf{Infrastructure:} Electricity (at least 400kW), water (50-100 m³/day), wastewater disposal
+\end{itemize}
+
+\textbf{Phase 2: Legal and Regulatory Requirements (3-6 months)}
+
+\textbf{2.1 Company Formation}
+\begin{itemize}
+\item \textbf{Legal Form:} GmbH recommended (limited liability, credibility)
+\item \textbf{Notary:} Notarize articles of association
+\item \textbf{Commercial Register:} Registration with local court
+\item \textbf{Business Registration:} With local authority
+\item \textbf{Tax Advisor:} Apply for VAT ID, set up tax consulting
+\end{itemize}
+
+\textbf{2.2 Food Regulatory Approvals}
+\begin{itemize}
+\item \textbf{Food Business Registration:} With competent authority (veterinary or health department)
+\item \textbf{HACCP Concept:} Document hazard analysis and critical control points
+\item \textbf{Allergen Labeling:} Observe EU Regulation 1169/2011
+\item \textbf{Nutrition Labeling:} Create nutrition table, possibly laboratory nutrition analysis
+\item \textbf{Packaging Regulations:} EU packaging directive, deposit systems
+\end{itemize}
+
+\textbf{2.3 Insurance}
+\begin{itemize}
+\item \textbf{Business Liability:} At least 5 million € coverage
+\item \textbf{Product Liability:} Mandatory for food manufacturers
+\item \textbf{Business Interruption Insurance:} Protection against production outages
+\item \textbf{Transport Insurance:} For goods transport
+\end{itemize}
+
+\textbf{Phase 3: Production Facilities and Equipment (6-12 months)}
+
+\textbf{3.1 Production Line}
+\begin{itemize}
+\item \textbf{Water Treatment Plant:} Reverse osmosis, activated carbon filters, UV disinfection (150,000-300,000 €)
+\item \textbf{Mixing and Dosing System:} Automatic dosing of all ingredients (200,000-500,000 €)
+\item \textbf{Carbonation System:} CO2 injection, pressure regulation (100,000-200,000 €)
+\item \textbf{Filling Line:} For bottles and/or cans, 3000-10000 bottles/hour (300,000-800,000 €)
+\item \textbf{Capping Machine:} Crown cap or screw cap machine (50,000-150,000 €)
+\item \textbf{Labeling Machine:} Automatic labeling (50,000-100,000 €)
+\item \textbf{Packaging System:} Cartoning, palletizing (100,000-200,000 €)
+\item \textbf{Quality Control:} Laboratory equipment, pH meter, refractometer (20,000-50,000 €)
+\end{itemize}
+
+\textbf{3.2 Warehouse Equipment}
+\begin{itemize}
+\item \textbf{Cooling Systems:} For refrigerated storage (50,000-150,000 €)
+\item \textbf{Racking Systems:} High-bay warehouse for efficient use (30,000-100,000 €)
+\item \textbf{Forklifts:} Electric forklifts (20,000-40,000 € each)
+\item \textbf{WMS Software:} Warehouse Management System (10,000-50,000 €)
+\end{itemize}
+
+\textbf{3.3 Building Facilities}
+\begin{itemize}
+\item \textbf{Sanitary Facilities:} Hygienic washrooms, changing rooms
+\item \textbf{Office Space:} Administration, quality control, meeting rooms
+\item \textbf{Security:} Alarm system, video surveillance, access control
+\end{itemize}
+
+\textbf{Phase 4: Personnel and Organization (3-6 months)}
+
+\textbf{4.1 Key Positions}
+\begin{itemize}
+\item \textbf{Management:} Strategic leadership, investor relations
+\item \textbf{Production Manager:} Daily production supervision, quality assurance
+\item \textbf{Sales Manager:} Customer acquisition, sales strategy
+\item \textbf{Quality Manager:} HACCP, quality control, certifications
+\item \textbf{Marketing Manager:} Branding, advertising, social media
+\item \textbf{Controller:} Finance, accounting, reporting
+\end{itemize}
+
+\textbf{4.2 Production Staff}
+\begin{itemize}
+\item \textbf{Line Operators:} 2-3 shifts, 2-3 people each
+\item \textbf{Quality Controllers:} 2-4 people for continuous control
+\item \textbf{Warehouse Workers:} 3-5 people for inbound and outbound
+\item \textbf{Maintenance Technicians:} 1-2 people for equipment maintenance
+\end{itemize}
+
+\textbf{4.3 Training and Certification}
+\begin{itemize}
+\item \textbf{HACCP Training:} For all employees with food contact
+\item \textbf{Equipment Training:} Manufacturer training for new equipment
+\item \textbf{First Aid:} First aid courses, safety training
+\end{itemize}
+
+\textbf{Phase 5: Procurement and Supplier Management (3-6 months)}
+
+\textbf{5.1 Supplier Selection}
+\begin{itemize}
+\item \textbf{Multiple Suppliers:} For critical raw materials (risk minimization)
+\item \textbf{Quality Audits:} Inspection of supplier facilities
+\item \textbf{Contracts:} Framework agreements, price agreements, delivery terms
+\item \textbf{Certifications:} Prefer ISO 22000, BRC, IFS
+\end{itemize}
+
+\textbf{5.2 Procurement Strategy}
+\begin{itemize}
+\item \textbf{Just-in-Time:} Minimize inventory costs
+\item \textbf{Safety Stocks:} 2-4 weeks for critical raw materials
+\item \textbf{Price Negotiations:} Volume discounts, long-term contracts
+\end{itemize}
+
+\textbf{Phase 6: Marketing and Branding (ongoing)}
+
+\textbf{6.1 Brand Development}
+\begin{itemize}
+\item \textbf{Brand Name:} Unique, memorable, legally protectable
+\item \textbf{Logo Design:} Professional design, various formats
+\item \textbf{Packaging Design:} Attractive, functional, sustainable
+\item \textbf{Brand Protection:} Trademark registration with DPMA (German Patent and Trademark Office)
+\end{itemize}
+
+\textbf{6.2 Marketing Strategy}
+\begin{itemize}
+\item \textbf{Online Marketing:} Website, social media (Instagram, Facebook, TikTok)
+\item \textbf{Event Marketing:} Festivals, events, sponsorship
+\item \textbf{PR:} Press work, influencer collaborations
+\item \textbf{Point-of-Sale:} Promotional materials for retailers
+\end{itemize}
+
+\textbf{Phase 7: Sales Development (ongoing)}
+
+\textbf{7.1 Sales Channels}
+\begin{itemize}
+\item \textbf{Gastronomy:} Restaurants, bars, cafés (direct sales)
+\item \textbf{Retail:} Supermarkets, beverage stores, organic stores
+\item \textbf{Online:} Own online shop, Amazon, other platforms
+\item \textbf{Wholesale:} Cash \& Carry, wholesalers
+\end{itemize}
+
+\textbf{7.2 Sales Strategy}
+\begin{itemize}
+\item \textbf{Regional Expansion:} Gradual expansion of sales territory
+\item \textbf{Pricing Strategy:} Premium positioning or mass market
+\item \textbf{Promotions:} Launch offers, special promotions
+\end{itemize}
+
+\textbf{Phase 8: Quality Assurance and Certification (ongoing)}
+
+\textbf{8.1 Quality Systems}
+\begin{itemize}
+\item \textbf{HACCP:} Mandatory for food businesses
+\item \textbf{ISO 22000:} Food safety management system
+\item \textbf{IFS Food:} International Featured Standard (for retail)
+\item \textbf{BRC:} British Retail Consortium Standard
+\end{itemize}
+
+\textbf{8.2 Continuous Improvement}
+\begin{itemize}
+\item \textbf{KPI Monitoring:} Quality indicators, production yield
+\item \textbf{Customer Feedback:} Complaint management, product improvements
+\item \textbf{Internal Audits:} Regular reviews
+\end{itemize}
+
+\textbf{Financial Overview (Estimated Costs)}
+
+\begin{table}[H]
+\centering
+\caption{Startup Cost Overview / 启动成本概览}
+\begin{tabular}{lr}
+\toprule
+\textbf{Item / 项目} & \textbf{Cost (€) / 成本 (€)} \\
+\midrule
+Building (Purchase or Rent 5 years) & 500,000 - 1,500,000 \\
+Production Equipment & 1,200,000 - 2,500,000 \\
+Warehouse Equipment & 150,000 - 300,000 \\
+Office Equipment & 50,000 - 100,000 \\
+Startup Costs (Recipe, Tests) & 100,000 - 200,000 \\
+Marketing \& Branding & 200,000 - 500,000 \\
+Working Capital (6 months) & 500,000 - 1,000,000 \\
+Reserve & 200,000 - 400,000 \\
+\midrule
+\textbf{Total / 总计} & \textbf{2,900,000 - 6,500,000} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Timeline (Realistic Schedule)}
+
+\begin{itemize}
+\item \textbf{Month 1-6:} Market research, recipe development, business concept
+\item \textbf{Month 7-12:} Financing, location selection, legal formation
+\item \textbf{Month 13-18:} Building construction, equipment procurement, personnel recruitment
+\item \textbf{Month 19-24:} Equipment installation, test production, certifications
+\item \textbf{Month 25-30:} Market launch, sales development, marketing
+\item \textbf{Month 31+:} Expansion, optimization, scaling
+\end{itemize}
+
+\subsection{中文}
+本节提供了建立像Fritz-Kola这样的可乐公司的全面指南，包括所有必要的步骤和细节。
+
+\textbf{第一阶段：准备和规划（6-12个月）}
+
+\textbf{1.1 市场研究和商业概念}
+\begin{itemize}
+\item \textbf{市场分析:} 识别目标群体，分析竞争对手，寻找市场空白
+\item \textbf{独特卖点（USP）:} 什么使您的产品独特？（例如，高咖啡因含量，有机成分，区域来源）
+\item \textbf{商业模式:} B2B（餐饮业），B2C（零售），在线销售，或混合模式
+\item \textbf{财务规划:} 启动资金需求（500,000 - 2,000,000 €），盈亏平衡分析，5年预测
+\item \textbf{法律结构:} 选择GmbH、UG或KG，制定公司章程
+\end{itemize}
+
+\textbf{1.2 配方开发}
+\begin{itemize}
+\item \textbf{配方制定:} 尝试不同的成分比例
+\item \textbf{口味测试:} 焦点小组，盲品，迭代
+\item \textbf{法规合规:} 检查欧盟食品法规，添加剂批准
+\item \textbf{配方保护:} 保密协议，考虑专利申请
+\item \textbf{规模化:} 调整配方以适应大规模生产
+\end{itemize}
+
+\textbf{1.3 地点选择}
+\begin{itemize}
+\item \textbf{标准:} 水源，交通基础设施，劳动力，租金成本
+\item \textbf{空间需求:} 至少2000-5000 m²用于生产、仓库、办公室
+\item \textbf{许可证:} 建筑许可证，食品经营许可，环境许可证
+\item \textbf{基础设施:} 电力（至少400kW），水（50-100 m³/天），废水处理
+\end{itemize}
+
+\textbf{第二阶段：法律和监管要求（3-6个月）}
+
+\textbf{2.1 公司成立}
+\begin{itemize}
+\item \textbf{法律形式:} 推荐GmbH（有限责任，可信度）
+\item \textbf{公证:} 公证公司章程
+\item \textbf{商业登记:} 在当地法院注册
+\item \textbf{商业注册:} 向地方当局注册
+\item \textbf{税务顾问:} 申请增值税ID，建立税务咨询
+\end{itemize}
+
+\textbf{2.2 食品监管批准}
+\begin{itemize}
+\item \textbf{食品经营注册:} 向主管当局（兽医或卫生部门）注册
+\item \textbf{HACCP概念:} 记录危害分析和关键控制点
+\item \textbf{过敏原标签:} 遵守欧盟法规1169/2011
+\item \textbf{营养标签:} 创建营养表，可能需要进行实验室营养分析
+\item \textbf{包装法规:} 欧盟包装指令，押金系统
+\end{itemize}
+
+\textbf{2.3 保险}
+\begin{itemize}
+\item \textbf{商业责任:} 至少500万€保险
+\item \textbf{产品责任:} 食品制造商强制性
+\item \textbf{业务中断保险:} 保护生产中断
+\item \textbf{运输保险:} 货物运输
+\end{itemize}
+
+\textbf{第三阶段：生产设施和设备（6-12个月）}
+
+\textbf{3.1 生产线}
+\begin{itemize}
+\item \textbf{水处理设备:} 反渗透，活性炭过滤器，紫外线消毒（150,000-300,000 €）
+\item \textbf{混合和配料系统:} 自动配料所有成分（200,000-500,000 €）
+\item \textbf{碳酸化系统:} CO2注入，压力调节（100,000-200,000 €）
+\item \textbf{灌装线:} 用于瓶子和/或罐，3000-10000瓶/小时（300,000-800,000 €）
+\item \textbf{封盖机:} 皇冠盖或螺旋盖机（50,000-150,000 €）
+\item \textbf{贴标机:} 自动贴标（50,000-100,000 €）
+\item \textbf{包装系统:} 装盒，托盘化（100,000-200,000 €）
+\item \textbf{质量控制:} 实验室设备，pH计，折光仪（20,000-50,000 €）
+\end{itemize}
+
+\textbf{3.2 仓库设备}
+\begin{itemize}
+\item \textbf{冷却系统:} 用于冷藏储存（50,000-150,000 €）
+\item \textbf{货架系统:} 高架仓库以提高效率（30,000-100,000 €）
+\item \textbf{叉车:} 电动叉车（每台20,000-40,000 €）
+\item \textbf{WMS软件:} 仓库管理系统（10,000-50,000 €）
+\end{itemize}
+
+\textbf{3.3 建筑设施}
+\begin{itemize}
+\item \textbf{卫生设施:} 卫生洗手间，更衣室
+\item \textbf{办公空间:} 管理，质量控制，会议室
+\item \textbf{安全:} 报警系统，视频监控，门禁控制
+\end{itemize}
+
+\textbf{第四阶段：人员和组织（3-6个月）}
+
+\textbf{4.1 关键职位}
+\begin{itemize}
+\item \textbf{管理:} 战略领导，投资者关系
+\item \textbf{生产经理:} 日常生产监督，质量保证
+\item \textbf{销售经理:} 客户获取，销售策略
+\item \textbf{质量经理:} HACCP，质量控制，认证
+\item \textbf{营销经理:} 品牌，广告，社交媒体
+\item \textbf{财务控制:} 财务，会计，报告
+\end{itemize}
+
+\textbf{4.2 生产人员}
+\begin{itemize}
+\item \textbf{生产线操作员:} 2-3班，每班2-3人
+\item \textbf{质量检查员:} 2-4人进行持续控制
+\item \textbf{仓库工人:} 3-5人进行入库和出库
+\item \textbf{维护技术员:} 1-2人进行设备维护
+\end{itemize}
+
+\textbf{4.3 培训和认证}
+\begin{itemize}
+\item \textbf{HACCP培训:} 对所有接触食品的员工
+\item \textbf{设备培训:} 新设备的制造商培训
+\item \textbf{急救:} 急救课程，安全培训
+\end{itemize}
+
+\textbf{第五阶段：采购和供应商管理（3-6个月）}
+
+\textbf{5.1 供应商选择}
+\begin{itemize}
+\item \textbf{多个供应商:} 对于关键原材料（风险最小化）
+\item \textbf{质量审计:} 检查供应商设施
+\item \textbf{合同:} 框架协议，价格协议，交付条款
+\item \textbf{认证:} 优先选择ISO 22000、BRC、IFS
+\end{itemize}
+
+\textbf{5.2 采购策略}
+\begin{itemize}
+\item \textbf{准时制:} 最小化库存成本
+\item \textbf{安全库存:} 关键原材料2-4周
+\item \textbf{价格谈判:} 数量折扣，长期合同
+\end{itemize}
+
+\textbf{第六阶段：营销和品牌（持续）}
+
+\textbf{6.1 品牌开发}
+\begin{itemize}
+\item \textbf{品牌名称:} 独特，易记，法律上可保护
+\item \textbf{标志设计:} 专业设计，各种格式
+\item \textbf{包装设计:} 有吸引力，功能性，可持续
+\item \textbf{品牌保护:} 在DPMA（德国专利商标局）注册商标
+\end{itemize}
+
+\textbf{6.2 营销策略}
+\begin{itemize}
+\item \textbf{在线营销:} 网站，社交媒体（Instagram，Facebook，TikTok）
+\item \textbf{活动营销:} 节日，活动，赞助
+\item \textbf{公关:} 新闻工作，影响者合作
+\item \textbf{销售点:} 零售商的促销材料
+\end{itemize}
+
+\textbf{第七阶段：销售开发（持续）}
+
+\textbf{7.1 销售渠道}
+\begin{itemize}
+\item \textbf{餐饮业:} 餐厅，酒吧，咖啡馆（直销）
+\item \textbf{零售:} 超市，饮料店，有机商店
+\item \textbf{在线:} 自己的在线商店，Amazon，其他平台
+\item \textbf{批发:} 现购自运，批发商
+\end{itemize}
+
+\textbf{7.2 销售策略}
+\begin{itemize}
+\item \textbf{区域扩张:} 逐步扩大销售区域
+\item \textbf{定价策略:} 高端定位或大众市场
+\item \textbf{促销:} 推出优惠，特别促销
+\end{itemize}
+
+\textbf{第八阶段：质量保证和认证（持续）}
+
+\textbf{8.1 质量体系}
+\begin{itemize}
+\item \textbf{HACCP:} 食品企业强制性
+\item \textbf{ISO 22000:} 食品安全管理体系
+\item \textbf{IFS Food:} 国际特色标准（用于零售）
+\item \textbf{BRC:} 英国零售联盟标准
+\end{itemize}
+
+\textbf{8.2 持续改进}
+\begin{itemize}
+\item \textbf{KPI监控:} 质量指标，生产产量
+\item \textbf{客户反馈:} 投诉管理，产品改进
+\item \textbf{内部审计:} 定期审查
+\end{itemize}
+
+\textbf{财务概览（估计成本）}
+
+\begin{table}[H]
+\centering
+\caption{启动成本概览}
+\begin{tabular}{lr}
+\toprule
+\textbf{项目} & \textbf{成本 (€)} \\
+\midrule
+建筑（购买或租赁5年） & 500,000 - 1,500,000 \\
+生产设备 & 1,200,000 - 2,500,000 \\
+仓库设备 & 150,000 - 300,000 \\
+办公设备 & 50,000 - 100,000 \\
+启动成本（配方，测试） & 100,000 - 200,000 \\
+营销和品牌 & 200,000 - 500,000 \\
+营运资金（6个月） & 500,000 - 1,000,000 \\
+储备 & 200,000 - 400,000 \\
+\midrule
+\textbf{总计} & \textbf{2,900,000 - 6,500,000} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{时间表（现实的时间安排）}
+
+\begin{itemize}
+\item \textbf{第1-6个月:} 市场研究，配方开发，商业概念
+\item \textbf{第7-12个月:} 融资，地点选择，法律成立
+\item \textbf{第13-18个月:} 建筑施工，设备采购，人员招聘
+\item \textbf{第19-24个月:} 设备安装，试生产，认证
+\item \textbf{第25-30个月:} 市场推出，销售开发，营销
+\item \textbf{第31个月+:} 扩张，优化，规模化
+\end{itemize}
+
+% ============================================
+% ZUSAMMENFASSUNG / SUMMARY
+% ============================================
+\section{Zusammenfassung / Summary / 总结}
+
+\subsection{Deutsch}
+Fritz-Kola repräsentiert eine erfolgreiche unabhängige Marke im deutschen Getränkemarkt. Durch Fokus auf Qualität, Nachhaltigkeit und regionale Verbundenheit hat sich die Marke eine treue Kundschaft aufgebaut. Die Supply Chain ist lokal verankert, aber mit wachsender internationaler Reichweite.
+
+\subsection{English}
+Fritz-Kola represents a successful independent brand in the German beverage market. Through a focus on quality, sustainability, and regional connection, the brand has built a loyal customer base. The supply chain is locally anchored but with growing international reach.
+
+\subsection{中文}
+Fritz-Kola 代表了德国饮料市场中一个成功的独立品牌。通过专注于质量、可持续性和区域联系，该品牌建立了忠实的客户群。供应链以本地为基础，但国际影响力正在增长。
+
+\end{document}
